@@ -40,6 +40,9 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/ipc_antennas, GLOB.ipc_antennas_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/ipc_chassis, GLOB.ipc_chassis_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/corvid_head_feathers, GLOB.corvid_head_feathers_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/corvid_body_feathers, GLOB.corvid_body_feathers_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/corvid_eyes, GLOB.corvid_eyes_list)
 	//WaspStation End
 
 	//Species

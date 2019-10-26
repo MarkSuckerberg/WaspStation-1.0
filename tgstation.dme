@@ -2180,6 +2180,7 @@
 #include "code\modules\mob\living\carbon\human\species_types\abductors.dm"
 #include "code\modules\mob\living\carbon\human\species_types\android.dm"
 #include "code\modules\mob\living\carbon\human\species_types\corporate.dm"
+#include "code\modules\mob\living\carbon\human\species_types\corvid.dm"
 #include "code\modules\mob\living\carbon\human\species_types\dullahan.dm"
 #include "code\modules\mob\living\carbon\human\species_types\ethereal.dm"
 #include "code\modules\mob\living\carbon\human\species_types\felinid.dm"

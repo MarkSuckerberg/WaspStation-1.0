@@ -17,6 +17,10 @@
 	desc = "Does card things."
 	icon = 'waspstation/icons/obj/card.dmi' //WaspStation Edit - Actually good-looking IDs >:)
 	w_class = WEIGHT_CLASS_TINY
+	species_fit = list("Corvid")
+	sprite_sheets = list(
+		"Corvid" = 'icons/mob/species/corvid/id.dmi'
+		)
 
 	var/list/files = list()
 

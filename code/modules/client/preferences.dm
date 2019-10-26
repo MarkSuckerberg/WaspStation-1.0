@@ -545,12 +545,39 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "</td>"
 					mutant_category = 0
 
+				if("corvid_body_feathers" in pref_species.mutant_bodyparts)
+					dat += "<td valign='top' width='10%'>"
+
+					dat += "<h3>Corvid Body Feathers</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=corvid_body_feathers;task=input'>[features["corvid_body_feathers"]]</a><BR>"
+
+					dat += "</td>"
+
+				if("corvid_head_feathers" in pref_species.mutant_bodyparts)
+					dat += "<td valign='top' width='10%'>"
+
+					dat += "<h3>Corvid Head Feathers</h3>"
+
+					dat += "<a href='?_src_=prefs;preference=corvid_head_feathers;task=input'>[features["corvid_head_feathers"]]</a><BR>"
+					dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
+					dat += "</td>"
+
+				if("corvid_eyes" in pref_species.mutant_bodyparts)
+					dat += "<td valign='top' width='10%'>"
+
+					dat += "<h3>Corvid Eye color</h3>"
+
+					dat += "<span style='border: 1px solid #161616; background-color: #[eye_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=eyes;task=input'>Change</a><BR>"
+
+					dat += "</td>"
+
 			//Adds a thing to select which phobia because I can't be assed to put that in the quirks window
 			if("Phobia" in all_quirks)
 				dat += "<h3>Phobia</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=phobia;task=input'>[phobia]</a><BR>"
-
+				
 			if(CONFIG_GET(flag/join_with_mutant_humans))
 
 				if("wings" in pref_species.default_features && GLOB.r_wings_list.len >1)

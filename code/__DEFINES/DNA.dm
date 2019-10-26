@@ -131,6 +131,7 @@
 #define ROBOTIC_LIMBS	23 //limbs start out as robotic; but also use organic icons. If you want to use the default ones, you'll have to use on_species_gain
 #define NOMOUTH			24
 #define NO_BONES		25 //WaspStation Edit - Breakable Bones
+#define SMALLSPECIES    26 //Small by default.
 
 //organ slots
 #define ORGAN_SLOT_BRAIN "brain"

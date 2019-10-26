@@ -22,6 +22,9 @@
 	if(aug.body_zone != target_zone)
 		to_chat(user, "<span class='warning'>[tool] isn't the right type for [parse_zone(target_zone)].</span>")
 		return -1
+	if(NOAUGMENTATION in target.dna.species.species_traits)
+		to_chat(user, "<span class='warning'>This species is not compatible with augmentation.</span>")
+		return -1
 	L = surgery.operated_bodypart
 	if(L)
 		display_results(user, target, "<span class='notice'>You begin to augment [target]'s [parse_zone(user.zone_selected)]...</span>",

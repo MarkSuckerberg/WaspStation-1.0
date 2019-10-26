@@ -41,6 +41,9 @@ GLOBAL_LIST_EMPTY(squid_face_list)
 GLOBAL_LIST_EMPTY(ipc_screens_list)
 GLOBAL_LIST_EMPTY(ipc_antennas_list)
 GLOBAL_LIST_EMPTY(ipc_chassis_list)
+GLOBAL_LIST_EMPTY(corvid_body_feathers_list)
+GLOBAL_LIST_EMPTY(corvid_head_feathers_list)
+GLOBAL_LIST_EMPTY(corvid_eyes_list)
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(
 	"Red" = "ff4d4d",
