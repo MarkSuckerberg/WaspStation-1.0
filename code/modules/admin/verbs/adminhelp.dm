@@ -238,6 +238,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	. += " (<A HREF='?_src_=holder;[HrefToken(TRUE)];ahelp=[ref_src];ahelp_action=icissue'>IC</A>)"
 	. += " (<A HREF='?_src_=holder;[HrefToken(TRUE)];ahelp=[ref_src];ahelp_action=close'>CLOSE</A>)"
 	. += " (<A HREF='?_src_=holder;[HrefToken(TRUE)];ahelp=[ref_src];ahelp_action=resolve'>RSLVE</A>)"
+	. += " (<A HREF='?_src_=holder;[HrefToken(TRUE)];ahelp=[ref_src];ahelp_action=mhelp'>MHELP</A>)"
 
 //private
 /datum/admin_help/proc/LinkedReplyName(ref_src)
@@ -389,6 +390,26 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	SSblackbox.LogAhelp(id, "IC Issue", "Marked as IC issue by [usr.key]", null,  usr.ckey)
 	Resolve(silent = TRUE)
 
+//Tell the ticketer to mhelp it. From Beestation
+/datum/admin_help/proc/MHelpThis(key_name = key_name_admin(usr))
+    if(state != AHELP_ACTIVE)
+        return
+
+    if(initiator)
+        initiator.giveadminhelpverb()
+
+        SEND_SOUND(initiator, sound('sound/effects/adminhelp.ogg'))
+
+        to_chat(initiator, "<font color='red' size='4'><b>- AdminHelp Rejected! -</b></font>")
+        to_chat(initiator, "<font color='red'>This question may regard <b>game mechanics or how-tos</b>. Such questions should be asked with <b>Mentorhelp</b>.</font>")
+
+    SSblackbox.record_feedback("tally", "ahelp_stats", 1, "mhelp this")
+    var/msg = "Ticket [TicketHref("#[id]")] told to mentorhelp by [key_name]"
+    message_admins(msg)
+    log_admin_private(msg)
+    AddInteraction("Told to mentorhelp by [key_name].")
+    Close(silent = TRUE)
+
 //Show the ticket panel
 /datum/admin_help/proc/TicketPanel()
 	var/list/dat = list("<html><head><title>Ticket #[id]</title></head>")
@@ -441,6 +462,8 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 			Retitle()
 		if("reject")
 			Reject()
+		if("mhelp")
+			MHelpThis()
 		if("reply")
 			usr.client.cmd_ahelp_reply(initiator)
 		if("icissue")
