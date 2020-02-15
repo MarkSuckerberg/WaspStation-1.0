@@ -31,6 +31,8 @@
 #define REACT_REAGENTS	5	// a reaction occured
 
 #define MIMEDRINK_SILENCE_DURATION 30  //ends up being 60 seconds given 1 tick every 2 seconds
+
+#define TRESHOLD_UNHUSK 50 //threshold for various reagents to unhusk. Also is spelled wrong. Yeah, thanks cobby.
 //used by chem masters and pill presses
 #define PILL_STYLE_COUNT 22 //Update this if you add more pill icons or you die
 #define RANDOM_PILL_STYLE 22 //Dont change this one though

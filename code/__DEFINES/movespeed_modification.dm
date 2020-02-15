@@ -77,5 +77,5 @@
 #define MOVESPEED_ID_HUNGRY                             "HUNGRY"
 #define MOVESPEED_ID_DAMAGE_SLOWDOWN                    "DAMAGE"
 #define MOVESPEED_ID_DAMAGE_SLOWDOWN_FLYING				"FLYING"
-#define MOVESPEED_ID_LENTURI                            "LENTURI_SLOWDOWN"
+#define MOVESPEED_ID_LENTANE                            "LENTANE_SLOWDOWN"
 
