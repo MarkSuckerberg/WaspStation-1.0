@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(air)
 	flags = SS_BACKGROUND
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
-	var/cost_turfs = 0
+	var/cost_turf_reactions = 0
 	var/cost_groups = 0
 	var/cost_highpressure = 0
 	var/cost_hotspots = 0
@@ -18,6 +18,7 @@ SUBSYSTEM_DEF(air)
 
 	var/list/excited_groups = list()
 	var/list/active_turfs = list()
+	var/list/turf_react_queue = list()
 	var/list/hotspots = list()
 	var/list/networks = list()
 	var/list/obj/machinery/atmos_machinery = list()
@@ -42,8 +43,7 @@ SUBSYSTEM_DEF(air)
 
 /datum/controller/subsystem/air/stat_entry(msg)
 	msg += "C:{"
-	msg += "EQ:[round(cost_equalize,1)]|"
-	msg += "AT:[round(cost_turfs,1)]|"
+	msg += "RQ:[round(cost_turf_reactions,1)]|"
 	msg += "EG:[round(cost_groups,1)]|"
 	msg += "HP:[round(cost_highpressure,1)]|"
 	msg += "HS:[round(cost_hotspots,1)]|"
@@ -52,6 +52,7 @@ SUBSYSTEM_DEF(air)
 	msg += "AM:[round(cost_atmos_machinery,1)]"
 	msg += "} "
 	msg += "AT:[active_turfs.len]|"
+	msg += "RQ:[turf_react_queue.len]|"
 	msg += "EG:[excited_groups.len]|"
 	msg += "HS:[hotspots.len]|"
 	msg += "PN:[networks.len]|"
@@ -88,21 +89,12 @@ SUBSYSTEM_DEF(air)
 		if(state != SS_RUNNING)
 			return
 		resumed = 0
-		currentpart = SSAIR_EQUALIZE
+		currentpart = SSAIR_REACTQUEUE
 
-	if(currentpart == SSAIR_EQUALIZE)
+	if(currentpart == SSAIR_REACTQUEUE)
 		timer = TICK_USAGE_REAL
-		process_turf_equalize(resumed)
-		cost_equalize = MC_AVERAGE(cost_equalize, TICK_DELTA_TO_MS(TICK_USAGE_REAL - timer))
-		if(state != SS_RUNNING)
-			return
-		resumed = 0
-		currentpart = SSAIR_ACTIVETURFS
-
-	if(currentpart == SSAIR_ACTIVETURFS)
-		timer = TICK_USAGE_REAL
-		process_active_turfs(resumed)
-		cost_turfs = MC_AVERAGE(cost_turfs, TICK_DELTA_TO_MS(TICK_USAGE_REAL - timer))
+		process_react_queue(resumed)
+		cost_turf_reactions = MC_AVERAGE(cost_turf_reactions, TICK_DELTA_TO_MS(TICK_USAGE_REAL - timer))
 		if(state != SS_RUNNING)
 			return
 		resumed = 0
@@ -177,6 +169,19 @@ SUBSYSTEM_DEF(air)
 			return
 
 
+/datum/controller/subsystem/air/proc/process_react_queue(resumed = 0)
+	if(!resumed)
+		src.currentrun = turf_react_queue.Copy()
+	var/list/currentrun = src.currentrun
+	while(currentrun.len)
+		var/turf/open/T = currentrun[currentrun.len]
+		currentrun.len--
+		if(T)
+			T.process_cell_reaction()
+		if(MC_TICK_CHECK)
+			return
+
+
 /datum/controller/subsystem/air/proc/process_super_conductivity(resumed = 0)
 	if (!resumed)
 		src.currentrun = active_super_conductivity.Copy()
@@ -215,36 +220,6 @@ SUBSYSTEM_DEF(air)
 		if(MC_TICK_CHECK)
 			return
 
-/datum/controller/subsystem/air/proc/process_turf_equalize(resumed = 0)
-	//cache for sanic speed
-	var/fire_count = times_fired
-	if (!resumed)
-		src.currentrun = active_turfs.Copy()
-	//cache for sanic speed (lists are references anyways)
-	var/list/currentrun = src.currentrun
-	while(currentrun.len)
-		var/turf/open/T = currentrun[currentrun.len]
-		currentrun.len--
-		if (T)
-			equalize_pressure_in_zone(T, fire_count)
-		if (MC_TICK_CHECK)
-			return
-
-/datum/controller/subsystem/air/proc/process_active_turfs(resumed = 0)
-	//cache for sanic speed
-	var/fire_count = times_fired
-	if (!resumed)
-		src.currentrun = active_turfs.Copy()
-	//cache for sanic speed (lists are references anyways)
-	var/list/currentrun = src.currentrun
-	while(currentrun.len)
-		var/turf/open/T = currentrun[currentrun.len]
-		currentrun.len--
-		if (T)
-			T.process_cell(fire_count)
-		if (MC_TICK_CHECK)
-			return
-
 /datum/controller/subsystem/air/proc/process_excited_groups(resumed = 0)
 	if (!resumed)
 		src.currentrun = excited_groups.Copy()
@@ -265,8 +240,7 @@ SUBSYSTEM_DEF(air)
 
 /datum/controller/subsystem/air/proc/remove_from_active(turf/open/T)
 	active_turfs -= T
-	if(currentpart == SSAIR_ACTIVETURFS)
-		currentrun -= T
+	SSair_turfs.currentrun -= T
 	#ifdef VISUALIZE_ACTIVE_TURFS
 	T.remove_atom_colour(TEMPORARY_COLOUR_PRIORITY, "#00ff00")
 	#endif
@@ -274,6 +248,7 @@ SUBSYSTEM_DEF(air)
 		T.excited = 0
 		if(T.excited_group)
 			T.excited_group.garbage_collect()
+	remove_from_react_queue(T)
 
 /datum/controller/subsystem/air/proc/add_to_active(turf/open/T, blockchanges = 1)
 	if(istype(T) && T.air)
@@ -282,10 +257,10 @@ SUBSYSTEM_DEF(air)
 		#endif
 		T.excited = 1
 		active_turfs |= T
-		if(currentpart == SSAIR_ACTIVETURFS)
-			currentrun |= T
+		SSair_turfs.currentrun |= T
 		if(blockchanges && T.excited_group)
 			T.excited_group.garbage_collect()
+		add_to_react_queue(T)
 	else if(T.flags_1 & INITIALIZED_1)
 		for(var/turf/S in T.atmos_adjacent_turfs)
 			add_to_active(S)
@@ -295,6 +270,18 @@ SUBSYSTEM_DEF(air)
 		return
 	else
 		T.requires_activation = TRUE
+
+/datum/controller/subsystem/air/proc/add_to_react_queue(turf/open/T)
+	if(istype(T) && T.air)
+		turf_react_queue |= T
+		if(currentpart == SSAIR_REACTQUEUE)
+			currentrun |= T
+	return
+
+/datum/controller/subsystem/air/proc/remove_from_react_queue(turf/open/T)
+	turf_react_queue -= T
+	if(currentpart == SSAIR_REACTQUEUE)
+		currentrun -= T
 
 /datum/controller/subsystem/air/StartLoadingMap()
 	LAZYINITLIST(queued_for_activation)
