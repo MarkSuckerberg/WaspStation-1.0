@@ -428,7 +428,7 @@
 			T2.pressure_direction = T.pressure_direction // extend wallslam hell into space a bit, that way you're not totally safe from WALLSLAM HELL when in space.
 		cached_gases.Cut() // oh yeah its now vacuum I guess too, that's pretty important I think.
 		T.update_visuals() // yeah removing the plasma overlay is probably important.
-		if(istype(T, /turf/open/floor) && sum > 20 && prob(CLAMP(sum / 10, 0, 30)))
+		if(istype(T, /turf/open/floor) && sum > 20 && prob(clamp(sum / 10, 0, 30)))
 			var/turf/open/floor/F = T
 			F.remove_tile()
 
