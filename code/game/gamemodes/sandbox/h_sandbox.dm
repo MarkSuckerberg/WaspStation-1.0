@@ -178,7 +178,7 @@ GLOBAL_VAR_INIT(hsboxspawn, TRUE)
 				P.update_internals_hud_icon(1)
 
 			if("hsbscrubber") // This is beyond its normal capability but this is sandbox and you spawned one, I assume you need it
-				var/obj/hsb = new/obj/machinery/portable_atmospherics/scrubber{volume_rate=50*ONE_ATMOSPHERE;on=1}(usr.loc)
+				var/obj/hsb = new/obj/machinery/portable_atmospherics/scrubber{volume_rate=5000;on=1}(usr.loc)
 				hsb.update_icon() // hackish but it wasn't meant to be spawned I guess?
 
 			//

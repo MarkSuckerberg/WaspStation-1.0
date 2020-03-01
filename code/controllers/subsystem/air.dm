@@ -43,6 +43,7 @@ SUBSYSTEM_DEF(air)
 
 /datum/controller/subsystem/air/stat_entry(msg)
 	msg += "C:{"
+	msg += "EQ:[round(cost_equalize,1)]|"
 	msg += "RQ:[round(cost_turf_reactions,1)]|"
 	msg += "EG:[round(cost_groups,1)]|"
 	msg += "HP:[round(cost_highpressure,1)]|"
@@ -86,6 +87,15 @@ SUBSYSTEM_DEF(air)
 		timer = TICK_USAGE_REAL
 		process_atmos_machinery(resumed)
 		cost_atmos_machinery = MC_AVERAGE(cost_atmos_machinery, TICK_DELTA_TO_MS(TICK_USAGE_REAL - timer))
+		if(state != SS_RUNNING)
+			return
+		resumed = 0
+		currentpart = SSAIR_EQUALIZE
+
+	if(currentpart == SSAIR_EQUALIZE)
+		timer = TICK_USAGE_REAL
+		process_turf_equalize(resumed)
+		cost_equalize = MC_AVERAGE(cost_equalize, TICK_DELTA_TO_MS(TICK_USAGE_REAL - timer))
 		if(state != SS_RUNNING)
 			return
 		resumed = 0
@@ -218,6 +228,21 @@ SUBSYSTEM_DEF(air)
 		T.pressure_difference = 0
 		T.pressure_specific_target = null
 		if(MC_TICK_CHECK)
+			return
+
+/datum/controller/subsystem/air/proc/process_turf_equalize(resumed = 0)
+	//cache for sanic speed
+	var/fire_count = times_fired
+	if (!resumed)
+		src.currentrun = active_turfs.Copy()
+	//cache for sanic speed (lists are references anyways)
+	var/list/currentrun = src.currentrun
+	while(currentrun.len)
+		var/turf/open/T = currentrun[currentrun.len]
+		currentrun.len--
+		if (T)
+			equalize_pressure_in_zone(T, fire_count)
+		if (MC_TICK_CHECK)
 			return
 
 /datum/controller/subsystem/air/proc/process_excited_groups(resumed = 0)
