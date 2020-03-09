@@ -10,7 +10,7 @@
 	time = 32
 	experience_given = MEDICAL_SKILL_MEDIUM
 	var/obj/item/bodypart/L = null // L because "limb"
-
+	self_operable = TRUE //WaspStation Edit - Self-surgery
 
 /datum/surgery_step/replace_limb/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	if(istype(tool, /obj/item/organ_storage) && istype(tool.contents[1], /obj/item/bodypart))
