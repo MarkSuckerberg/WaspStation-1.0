@@ -221,6 +221,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Lieutenant"
 	icon_state = "Lieutenant"
 
+/obj/effect/landmark/start/explorer
+	name = "Explorer"
+	icon_state = "Explorer"
+
 //Department Security spawns
 
 /obj/effect/landmark/start/depsec

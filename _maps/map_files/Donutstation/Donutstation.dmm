@@ -22288,6 +22288,7 @@
 	},
 /obj/effect/landmark/event_spawn,
 /obj/structure/cable,
+/obj/effect/landmark/start/explorer,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/eva)
 "bjd" = (
@@ -44597,8 +44598,7 @@
 /area/crew_quarters/heads/chief)
 "kAU" = (
 /obj/machinery/power/emitter/welded{
-	dir = 8;
-
+	dir = 8
 	},
 /obj/machinery/camera{
 	c_tag = "Engine -Emitters Right";
@@ -45424,8 +45424,7 @@
 /area/engine/engineering)
 "mHo" = (
 /obj/machinery/power/emitter/welded{
-	dir = 8;
-
+	dir = 8
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -47042,8 +47041,7 @@
 /area/maintenance/port)
 "pLI" = (
 /obj/machinery/power/emitter/welded{
-	dir = 4;
-
+	dir = 4
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -49600,8 +49598,7 @@
 /area/maintenance/port/aft)
 "vbr" = (
 /obj/machinery/power/emitter/welded{
-	dir = 4;
-
+	dir = 4
 	},
 /obj/machinery/camera{
 	c_tag = "Engine - Emitters Left";

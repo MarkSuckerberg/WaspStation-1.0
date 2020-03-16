@@ -10944,6 +10944,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/effect/landmark/start/explorer,
 /turf/open/floor/plasteel,
 /area/ai_monitored/storage/eva)
 "aBp" = (

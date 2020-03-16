@@ -66566,6 +66566,7 @@
 /area/maintenance/starboard/aft)
 "dbm" = (
 /obj/effect/landmark/event_spawn,
+/obj/effect/landmark/start/explorer,
 /turf/open/floor/plasteel,
 /area/ai_monitored/storage/eva)
 "dbn" = (
