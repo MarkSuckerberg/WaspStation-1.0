@@ -186,8 +186,13 @@ INITIALIZE_IMMEDIATE(/atom/movable/virtualspeaker)
 		var/datum/data/record/findjob = find_record("name", name, GLOB.data_core.general)
 		if(findjob)
 			job = findjob.fields["rank"]
-		else
-			job = "Unknown"
+		else //If you're not on the manifest, it uses the assignment of your ID.
+			var/mob/living/carbon/human/H = M
+			if(H.wear_id)
+				var/obj/item/card/id/I = H.wear_id
+				job = I.assignment
+			else
+				job = "Unknown"
 	else if(iscarbon(M))  // Carbon nonhuman
 		job = "No ID"
 	else if(isAI(M))  // AI
