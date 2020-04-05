@@ -4,6 +4,7 @@
 	max_integrity = 200
 	integrity_failure = 0.4
 	var/damaged_clothes = 0 //similar to machine's BROKEN stat and structure's broken var
+	var/list/species_restricted = null //Only these species can wear this kit.
 	///What level of bright light protection item has.
 	var/flash_protect = FLASH_PROTECTION_NONE
 	var/tint = 0				//Sets the item's level of visual impairment tint, normally set to the same as flash_protect
@@ -40,6 +41,54 @@
 	var/dynamic_hair_suffix = ""//head > mask for head hair
 	var/dynamic_fhair_suffix = ""//mask > head for facial hair
 
+//BS12: Species-restricted clothing check.
+/obj/item/clothing/mob_can_equip(mob/M, slot)
+
+	//if we can't equip the item anyway, don't bother with species_restricted (also cuts down on spam)
+	if(!..())
+		return FALSE
+
+	if(species_restricted && ishuman(M))
+
+		var/wearable = null
+		var/exclusive = null
+		var/mob/living/carbon/human/H = M
+
+		if("exclude" in species_restricted)
+			exclusive = TRUE
+
+		if(H.dna.species)
+			if(exclusive)
+				if(!(H.dna.species.name in species_restricted))
+					wearable = TRUE
+			else
+				if(H.dna.species.name in species_restricted)
+					wearable = TRUE
+
+			if(!wearable)
+				to_chat(M, "<span class='warning'>Your species cannot wear [src].</span>")
+				return FALSE
+
+	return TRUE
+
+/obj/item/clothing/proc/refit_for_species(var/target_species)
+	//Set species_restricted list
+	switch(target_species)
+		if("Human")//humanoid bodytypes
+			species_restricted = list("exclude","Unathi","Ash Walker", "Ethari")
+		else
+			species_restricted = list(target_species)
+
+	//Set icon
+	if(sprite_sheets && (target_species in sprite_sheets))
+		icon_override = sprite_sheets[target_species]
+	else
+		icon_override = initial(icon_override)
+
+	if(sprite_sheets_obj && (target_species in sprite_sheets_obj))
+		icon = sprite_sheets_obj[target_species]
+	else
+		icon = initial(icon)
 
 /obj/item/clothing/Initialize()
 	if((clothing_flags & VOICEBOX_TOGGLABLE))

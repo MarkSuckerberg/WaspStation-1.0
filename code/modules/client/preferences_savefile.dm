@@ -349,6 +349,14 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_ipc_screen"]			>> features["ipc_screen"]
 	S["feature_ipc_antenna"]				>> features["ipc_antenna"]
 	S["feature_ipc_chassis"]				>> features["ipc_chassis"]
+	S["feature_teshari_body_feathers"]		>> features["teshari_body_feathers"]
+	S["feature_teshari_head_feathers"]		>> features["teshari_head_feathers"]
+	S["feature_vox_body"]				>> features["vox_body"]
+	S["feature_vox_quills"]				>> features["vox_quills"]
+	S["feature_vox_facial_quills"]		>> features["vox_facial_quills"]
+	S["feature_vox_body_markings"]		>> features["vox_body_markings"]
+	S["feature_vox_tail_markings"]		>> features["vox_tail_markings"]
+
 	if(!CONFIG_GET(flag/join_with_mutant_humans))
 		features["tail_human"] = "none"
 		features["ears"] = "none"
@@ -441,6 +449,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["ipc_screen"]	= sanitize_inlist(features["ipc_screen"], GLOB.ipc_screens_list)
 	features["ipc_antenna"]	 = sanitize_inlist(features["ipc_antenna"], GLOB.ipc_antennas_list)
 	features["ipc_chassis"]	 = sanitize_inlist(features["ipc_chassis"], GLOB.ipc_chassis_list)
+	features["teshari_body_feathers"]	 = sanitize_inlist(features["teshari_body_feathers"], GLOB.teshari_body_feathers_list, "None")
+	features["teshari_head_feathers"]	 = sanitize_inlist(features["teshari_head_feathers"], GLOB.teshari_head_feathers_list, "None")
+	S["feature_vox_body"]				>> features["vox_body"]
+	S["feature_vox_quills"]				>> features["vox_quills"]
+	S["feature_vox_facial_quills"]		>> features["vox_facial_quills"]
+	S["feature_vox_body_markings"]		>> features["vox_body_markings"]
+	S["feature_vox_tail_markings"]		>> features["vox_tail_markings"]
 
 	joblessrole	= sanitize_integer(joblessrole, 1, 3, initial(joblessrole))
 	//Validate job prefs
@@ -500,6 +515,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_ipc_screen"]			, features["ipc_screen"])
 	WRITE_FILE(S["feature_ipc_antenna"]			, features["ipc_antenna"])
 	WRITE_FILE(S["feature_ipc_chassis"]			, features["ipc_chassis"])
+	WRITE_FILE(S["feature_teshari_body_feathers"]		, features["teshari_body_feathers"])
+	WRITE_FILE(S["feature_teshari_head_feathers"]		, features["teshari_head_feathers"])
+	WRITE_FILE(S["feature_vox_body"]				, features["vox_body"])
+	WRITE_FILE(S["feature_vox_quills"]				, features["vox_quills"])
+	WRITE_FILE(S["feature_vox_facial_quills"]		, features["vox_facial_quills"])
+	WRITE_FILE(S["feature_vox_body_markings"]		, features["vox_body_markings"])
+	WRITE_FILE(S["feature_vox_tail_markings"]		, features["vox_tail_markings"])
 
 
 	//Custom names

@@ -302,6 +302,21 @@
 			stored_mmi.icon_state = "posibrain-occupied"
 			update_from_mmi()
 
+/obj/item/organ/brain/vox
+	name = "vox brain"
+	slot = ORGAN_SLOT_BRAIN
+	desc = "A vox brain. A truly alien organ made up of both organic and synthetic parts. I bet you thought there was going to be a bird-brain joke here, didn't you?"
+	zone = BODY_ZONE_HEAD
+	status = ORGAN_ROBOTIC
+
+/obj/item/organ/brain/vox/emp_act(severity)
+	to_chat(owner, "<span class='warning'>Your head hurts.</span>")
+	switch(severity)
+		if(1)
+			owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, rand(25, 50))
+		if(2)
+			owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, rand(0, 25))
+
 ////////////////////////////////////TRAUMAS////////////////////////////////////////
 
 /obj/item/organ/brain/proc/has_trauma_type(brain_trauma_type = /datum/brain_trauma, resilience = TRAUMA_RESILIENCE_ABSOLUTE)

@@ -18,6 +18,7 @@
 		/datum/language/beachbum,
 		/datum/language/aphasia,
 		/datum/language/piratespeak,
+		/datum/language/voxpidgin,
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
@@ -257,7 +258,7 @@
 
 /obj/item/organ/tongue/robot/can_speak_language(language)
 	return TRUE // THE MAGIC OF ELECTRONICS
-	
+
 /obj/item/organ/tongue/robot/emp_act(severity)
 	owner.apply_effect(EFFECT_STUTTER, 120)
 	owner.emote("scream")

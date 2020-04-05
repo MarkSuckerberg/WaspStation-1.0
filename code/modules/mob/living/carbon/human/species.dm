@@ -36,6 +36,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/burnmod = 1		// multiplier for burn damage
 	var/coldmod = 1		// multiplier for cold damage
 	var/heatmod = 1		// multiplier for heat damage
+	var/toxmod = 1		// multiplier for toxin damage
 	var/stunmod = 1		// multiplier for stun duration
 	var/attack_type = BRUTE //Type of damage attack does
 	var/punchdamagelow = 1       //lowest possible punch damage. if this is set to 0, punches will always miss
@@ -51,6 +52,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/datum/outfit/outfit_important_for_life /// A path to an outfit that is important for species life e.g. plasmaman outfit
 	var/reagent_tag = PROCESS_ORGANIC //Used for metabolizing reagents. We're going to assume you're a meatbag unless you say otherwise.
 	var/species_gibs = "human"
+	var/husk_id = "husk" // For species-specific husk graphics. Currently in use: husk, or voxhusk.
 	var/allow_numbers_in_name // Can this species use numbers in its name?
 
 	var/flying_species = FALSE //is a flying species, just a check for some things
@@ -388,6 +390,12 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 	SEND_SIGNAL(C, COMSIG_SPECIES_LOSS, src)
 
+/datum/species/proc/on_husk()
+	return
+
+/datum/species/proc/on_husk_cure()
+	return
+
 /datum/species/proc/handle_hair(mob/living/carbon/human/H, forced_colour)
 	H.remove_overlay(HAIR_LAYER)
 	var/obj/item/bodypart/head/HD = H.get_bodypart(BODY_ZONE_HEAD)
@@ -672,6 +680,26 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(!H.dna.features["ipc_antenna"] || H.dna.features["ipc_antenna"] == "None" || H.head && (H.head.flags_inv & HIDEHAIR) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)) || !HD)
 			bodyparts_to_add -= "ipc_antenna"
 
+	if("vox_quills" in mutant_bodyparts)
+		if(!H.dna.features["vox_quills"] || H.dna.features["vox_quills"] == "None" || H.head && (H.head.flags_inv & HIDEHAIR) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)) || !HD || HD.status == BODYPART_ROBOTIC)
+			bodyparts_to_add -= "vox_quills"
+
+	if("vox_facial_quills" in mutant_bodyparts)
+		if(!H.dna.features["vox_facial_quills"] || H.dna.features["vox_facial_quills"] == "None" || H.head && (H.head.flags_inv & HIDEFACE) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEEYES)) || !HD || HD.status == BODYPART_ROBOTIC)
+			bodyparts_to_add -= "vox_facial_quills"
+
+	if("vox_eyes" in mutant_bodyparts)
+		if(!H.dna.features["vox_eyes"] || (H.wear_mask && (H.wear_mask.flags_inv & HIDEEYES)) || !HD || HD.status == BODYPART_ROBOTIC)
+			bodyparts_to_add -= "vox_eyes"
+
+	if("vox_tail" in mutant_bodyparts)
+		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "vox_tail"
+
+	if("vox_tail_markings" in mutant_bodyparts)
+		if(H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "vox_tail_markings"
+
 	//Digitigrade legs are stuck in the phantom zone between true limbs and mutant bodyparts. Mainly it just needs more agressive updating than most limbs.
 	var/update_needed = FALSE
 	var/not_digitigrade = TRUE
@@ -749,6 +777,20 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					S = GLOB.ipc_antennas_list[H.dna.features["ipc_antenna"]]
 				if("ipc_chassis")
 					S = GLOB.ipc_chassis_list[H.dna.features["ipc_chassis"]]
+				if("vox_body")
+					S = GLOB.vox_bodies_list[H.dna.features["vox_body"]]
+				if("vox_quills")
+					S = GLOB.vox_quills_list[H.dna.features["vox_quills"]]
+				if("vox_facial_quills")
+					S = GLOB.vox_facial_quills_list[H.dna.features["vox_facial_quills"]]
+				if("vox_eyes")
+					S = GLOB.vox_eyes_list[H.dna.features["vox_eyes"]]
+				if("vox_tail")
+					S = GLOB.vox_tails_list[H.dna.features["vox_tail"]]
+				if("vox_body_markings")
+					S = GLOB.vox_body_markings_list[H.dna.features["vox_body_markings"]]
+				if("vox_tail_markings")
+					S = GLOB.vox_tail_markings_list[H.dna.features["vox_tail_markings"]]
 			if(!S || S.icon_state == "none")
 				continue
 
@@ -1626,7 +1668,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			else
 				H.adjustFireLoss(damage_amount)
 		if(TOX)
-			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.tox_mod
+			var/damage_amount = forced ? damage : damage * hit_percent * toxmod * H.physiology.tox_mod
 			H.adjustToxLoss(damage_amount)
 		if(OXY)
 			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.oxy_mod
