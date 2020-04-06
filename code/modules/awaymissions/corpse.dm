@@ -10,6 +10,7 @@
 	var/mob_name = ""
 	var/mob_gender = null
 	var/death = TRUE //Kill the mob
+	var/maim = FALSE ///Remove all organs and limbs except the head and torso.
 	var/roundstart = TRUE //fires on initialize
 	var/instant = FALSE	//fires on New
 	var/short_desc = "The mapper forgot to set this!"
@@ -87,6 +88,16 @@
 		M.ForceContractDisease(new disease)
 	if(death)
 		M.death(1) //Kills the new mob
+	//WASP EDIT - MAIM CORPSE
+	if(maim && ishuman(M))
+		var/mob/living/carbon/human/H = M
+		var/static/list/zones = list(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_LEG)
+		for(var/zone in zones)
+			var/obj/item/bodypart/BP = H.get_bodypart(zone)
+			if(BP)
+				qdel(BP)
+				H.update_appearance
+	//WASP END
 
 	M.adjustOxyLoss(oxy_damage)
 	M.adjustBruteLoss(brute_damage)

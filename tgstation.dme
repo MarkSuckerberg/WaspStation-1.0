@@ -3074,6 +3074,7 @@
 #include "waspstation\code\modules\admin\verbs\modify_antag_tokens.dm"
 #include "waspstation\code\modules\atmospherics\gasmixtures\immutable_mixtures.dm"
 #include "waspstation\code\modules\atmospherics\machinery\portable\canister.dm"
+#include "waspstation\code\modules\awaymissions\corpse.dm"
 #include "waspstation\code\modules\buildmode\submodes\map_export.dm"
 #include "waspstation\code\modules\cargo\packs.dm"
 #include "waspstation\code\modules\cargo\blackmarket\blackmarket_items\weapons.dm"
