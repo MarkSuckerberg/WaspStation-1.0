@@ -5,24 +5,29 @@
 	var/wound_msg ///Message shown when wound inflicted, always proceeded by " your [limb name here]!"
 
 	var/pain_chance ///Chance of random pain
-	var/remove_pain ///Pain inflicted on removal of the wound. Unused
+	var/remove_pain ///Pain inflicted on removal of the wound. Unused.
+
 	var/heal_chance ///Chance per tick of the wound healing.
-	var/initial_pain ///Pain inflicted upon recieving the wound.
+	var/initial_pain ///Damage inflicted upon recieving the wound.
 	var/irritate_chance ///Chance of random pain when walking
-	var/irritate_pain ///Pain caused by random pain
+	var/irritate_pain ///Damage caused by random pain
+	var/max_irritate_pain ///Maximum amount of pain that can be done per irritation.
+	var/bleed ///Amount of bleeding per tick
 
 	var/damage_type_initial ///Damage type first recieved
 	var/damage_type ///Damage type of all subsequent pain recieved
 
+	var/tended = 0 ///How good is the wound tended/how long will the tending last if continually irritated?
 
 /datum/component/wound/Initialize(woundtype = "wound",
-	wound_msg = "A wound appears on",
+	wound_msg = "A wound appears on your [parent.name]!",
 	pain_chance = 0,
 	remove_pain = 0,
 	heal_chance = 0,
 	initial_pain = 0,
 	irritate_chance = 0,
 	irritate_pain = 0,
+	max_irritate_pain = 7,
 	damage_type_initial = BRUTE,
 	damage_type = BRUTE)
 
@@ -39,6 +44,7 @@
 	src.initial_pain = initial_pain
 	src.irritate_chance = irritate_chance
 	src.irritate_pain = irritate_pain
+	src.max_irritate_pain = max_irritate_pain
 	src.damage_type_initial = damage_type_initial
 	src.damage_type = damage_type
 
@@ -46,7 +52,7 @@
 	var/mob/living/carbon/human/victim = L.owner
 
 	L.wounds += woundtype
-	to_chat(victim, "<span class='danger'>[wound_msg] your [L.name]!</span>")
+	to_chat(victim, "<span class='danger'>[wound_msg]</span>")
 	if(damage_type == BURN)
 		L.receive_damage(burn = initial_pain)
 	else if(damage_type == STAMINA)
@@ -58,50 +64,71 @@
 /datum/component/wound/RegisterWithParent()
 	if(ishuman(L.owner))
 		RegisterSignal(L.owner, COMSIG_MOVABLE_MOVED, .proc/irritate_check)
-		RegisterSignal(L.owner, COMSIG_HUMAN_EMBED_REMOVAL, .proc/tend_wound)
+		RegisterSignal(L.owner, COMSIG_HUMAN_WOUND_HEAL_SURGERY, .proc/tend)
 
 /datum/component/wound/UnregisterFromParent()
 	if(ishuman(L.owner))
-		UnregisterSignal(L.owner, list(COMSIG_MOVABLE_MOVED, COMSIG_HUMAN_EMBED_REMOVAL))
+		UnregisterSignal(L.owner, list(COMSIG_MOVABLE_MOVED, COMSIG_HUMAN_WOUND_HEAL_SURGERY))
 
 /datum/component/wound/process()
 	if(ishuman(L.owner))
 		processHuman()
 
 
-/// Called every time a human with a wound moves, rolling a chance for the wound to inflict pain. The chance is halved if the human is crawling or walking.
+/// Called every time a human with a wound moves, rolling a chance for the wound to inflict pain.
+/// The chance is halved if the human is crawling or walking. There is an even smaller chance that the wound opens even more, negating all passive healing.
 /datum/component/wound/proc/irritate_check()
 	var/mob/living/carbon/human/victim = L.owner
 
-	var/chance = irritate_chance
-	if(victim.m_intent == MOVE_INTENT_WALK || victim.lying)
-		chance *= 0.5
+	if(irritate_chance) //If there's no chance, why check?
+		var/chance = irritate_chance
+		if(victim.m_intent == MOVE_INTENT_WALK || victim.lying)
+			chance *= 0.5
+		if(prob(chance))
+			if(!tended && irritate_pain < max_irritate_pain)
+				irritate_pain++
+				to_chat(victim, "<span class='userdanger'>The [woundtype] on your [L.name] stings and gets worse!</span>")
+			if(tended)
+				tended--
+				if(tended)
+					to_chat(victim, "<span class='danger'>The tended [woundtype] on your [L.name] seems to shift a bit.</span>")
+				else
+					heal_chance = heal_chance / 2 //at least I'm not reupping the random pain amount, be thankful
+					to_chat(victim, "<span class='userdanger'>The [woundtype] on your [L.name] reopens!</span>") //shoulda layed down, dunkass
 
-	if(prob(chance))
-		if(damage_type == BURN)
-			L.receive_damage(burn = irritate_pain)
-		else if(damage_type == STAMINA)
-			L.receive_damage(stamina = irritate_pain)
-		else
-			L.receive_damage(brute = irritate_pain)
-		to_chat(victim, "<span class='danger'>The [woundtype] on your [L.name] hurts!</span>")
+/// Called whenever the wound is treated in surgery.
+/// Halves the amount of pain done every time it's irritated, which, as long as the woundee doesn't reopen it, shouldn't ever happen. Also increases heal chance for quicker healing.
+/// If called in-proc, don't specify the woundtype or it will likely fail to call. This is only to check for if the surgery is the correct one for the wound.
+/datum/component/wound/proc/tend(quality, woundtype = src.woundtype)
+
+	if(woundtype != src.woundtype)
+		return
+
+	irritate_pain = round((irritate_pain / 2))
+	heal_chance = heal_chance * 2
+	tended = quality
 
 
-/// Called when then wound randomly heals after healing.
-/datum/component/wound/proc/randheal()
+/// Called when then wound heals.
+/// Heals the pain done by every irritation by the healamnt, and if that results in there being no irritate damage, the wound is healed.
+/datum/component/wound/proc/rand_heal(healamnt = 1, woundtype = src.woundtype)
 	var/mob/living/carbon/human/victim = L.owner
 
-	if(remove_pain)
-		L.receive_damage(brute = remove_pain)
-		to_chat(victim, "<span class='danger'>The [woundtype] on your [L.name] hurts, but then seems to heal!</span>")
+	irritate_pain = irritate_pain - healamnt
+
+	if(irritate_pain <= 0)
+		if(remove_pain)
+			L.receive_damage(brute = remove_pain)
+			to_chat(victim, "<span class='danger'>The [woundtype] on your [L.name] hurts, but then seems to heal!</span>")
+		else
+			to_chat(victim, "<span class='notice'>The [woundtype] on your [L.name] seems to have fully healed!</span>")
+
+		heal_wound()
 	else
-		to_chat(victim, "<span class='notice'>The [woundtype] on your [L.name] seems to have fully healed!</span>")
+		to_chat(victim, "<span class='notice'>The [woundtype] on your [L.name] seems to have healed slightly.</span>")
 
-	tend_wound()
-
-/// This proc handles the final step and actual removal of an embedded/stuck item from a human, whether or not it was actually removed safely.
-/// Pass TRUE for to_hands if we want it to go to the victim's hands when they pull it out
-/datum/component/wound/proc/tend_wound()
+/// This proc handles the final step and actual healing of a wound that was on a human.
+/datum/component/wound/proc/heal_wound(woundtype = src.woundtype)
 	var/mob/living/carbon/human/victim = L.owner
 
 	if(!victim.has_wounds())
@@ -110,26 +137,25 @@
 	qdel(src)
 
 
-/// Items embedded/stuck to humans both check whether they randomly fall out (if applicable), as well as if the target mob and limb still exists.
-/// Items harmfully embedded in humans have an additional check for random pain (if applicable)
+/// Wounds continually check for both random pain damage and random healing damage.
 /datum/component/wound/proc/processHuman()
 	var/mob/living/carbon/human/victim = L.owner
 
 	if(victim.stat == DEAD)
 		return
 
-	if(prob(pain_chance))
-		if(damage_type == BURN)
-			L.receive_damage(burn = irritate_pain)
-		else if(damage_type == STAMINA)
-			L.receive_damage(stamina = irritate_pain)
-		else
-			L.receive_damage(brute = irritate_pain)
-		to_chat(victim, "<span class='userdanger'>The [woundtype] on your [L.name] hurts!</span>")
+	if(!tended)
+		if(bleed)
+			victim.bleed(bleed)
+
+		if(prob(pain_chance))
+			if(damage_type == BURN)
+				L.receive_damage(burn = irritate_pain)
+			else if(damage_type == STAMINA)
+				L.receive_damage(stamina = irritate_pain)
+			else
+				L.receive_damage(brute = irritate_pain)
+			to_chat(victim, "<span class='userdanger'>The [woundtype] on your [L.name] hurts!</span>")
 
 	if(prob(heal_chance))
-		irritate_pain--
-		if(!irritate_pain > 0)
-			randheal()
-		else
-			to_chat(victim, "<span class='notice'>The [woundtype] on your [L.name] seems to have healed slightly.</span>")
+		rand_heal(1)

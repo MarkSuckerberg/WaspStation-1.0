@@ -15,6 +15,8 @@
 	. = 0
 	for(var/X in bodyparts)
 		var/obj/item/bodypart/L = X
-		for(var/obj/item/I in L.wounds)
+		for(var/I in L.wounds)
 			return 1
 
+/mob/living/carbon/proc/has_wounds_in_part(bodypart)
+	
