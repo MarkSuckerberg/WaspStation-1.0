@@ -32,6 +32,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/list/mutant_organs = list()		//Internal organs that are unique to this race.
 	var/speedmod = 0	// this affects the race's speed. positive numbers make it move slower, negative numbers make it move faster
 	var/armor = 0		// overall defense for the race... or less defense, if it's negative.
+	var/woundmod = 1	// modifier to chance of getting wounded (gashes, cuts, etc.)
 	var/brutemod = 1	// multiplier for brute damage
 	var/burnmod = 1		// multiplier for burn damage
 	var/coldmod = 1		// multiplier for cold damage
@@ -1514,7 +1515,24 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/Iforce = I.force //to avoid runtimes on the forcesay checks at the bottom. Some items might delete themselves if you drop them. (stunning yourself, ninja swords)
 
 	var/weakness = H.check_weakness(I, user)
-	apply_damage(I.force * weakness, I.damtype, def_zone, armor_block, H)
+
+	var/precisedamagetype
+	if(I.damtype == BRUTE)
+		if(I.get_sharpness())
+			precisedamagetype = DAMAGE_BRUTE_LACERATE
+		else if(istype(I, /obj/projectile/bullet))
+			precisedamagetype = DAMAGE_BRUTE_PUNCTURE
+		else
+			precisedamagetype = DAMAGE_BRUTE_BLUNTOBJ
+	else if(I.damtype == BURN)
+		if(I.force > 12)
+			precisedamagetype = DAMAGE_BURN_2NDDEGREE
+		else
+			precisedamagetype = DAMAGE_BURN_1STDEGREE
+	else
+		precisedamagetype = DAMAGE_NONE
+
+	apply_damage(I.force * weakness, I.damtype, def_zone, armor_block, H, specialtype = precisedamagetype)
 
 	H.send_item_attack_message(I, user, hit_area)
 
@@ -1590,7 +1608,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.forcesay(GLOB.hit_appends)	//forcesay checks stat already.
 	return TRUE
 
-/datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H, forced = FALSE, spread_damage = FALSE, break_modifier = 1)
+/datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H, forced = FALSE, spread_damage = FALSE, break_modifier = 1, specialtype = DAMAGE_NONE)
 	SEND_SIGNAL(H, COMSIG_MOB_APPLY_DAMGE, damage, damagetype, def_zone)
 	var/hit_percent = (100-(blocked+armor))/100
 	hit_percent = (hit_percent * (100-H.physiology.damage_resistance))/100
@@ -1613,7 +1631,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.damageoverlaytemp = 20
 			var/damage_amount = forced ? damage : damage * hit_percent * brutemod * H.physiology.brute_mod
 			if(BP)
-				if(BP.receive_damage(damage_amount, 0, break_modifier = break_modifier))
+				if(BP.receive_damage(damage_amount, 0, break_modifier = break_modifier, specialtype = specialtype, woundmod = woundmod))
 					H.update_damage_overlays()
 			else//no bodypart, we deal damage with a more general method.
 				H.adjustBruteLoss(damage_amount)
@@ -1621,7 +1639,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.damageoverlaytemp = 20
 			var/damage_amount = forced ? damage : damage * hit_percent * burnmod * H.physiology.burn_mod
 			if(BP)
-				if(BP.receive_damage(0, damage_amount, break_modifier = break_modifier))
+				if(BP.receive_damage(0, damage_amount, break_modifier = break_modifier, specialtype = specialtype, woundmod = woundmod))
 					H.update_damage_overlays()
 			else
 				H.adjustFireLoss(damage_amount)
@@ -1724,7 +1742,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			H.emote("scream")
 
 		// Apply the damage to all body parts
-		H.apply_damage(burn_damage, BURN, spread_damage = TRUE)
+		H.apply_damage(burn_damage, BURN, spread_damage = TRUE, specialtype = (burn_damage > 15) ? DAMAGE_BURN_3RDDEGREE : DAMAGE_BURN_4THDEGREE)
 
 	// Body temperature is too cold, and we do not have resist traits
 	else if(H.bodytemperature < bodytemp_cold_damage_limit && !HAS_TRAIT(H, TRAIT_RESISTCOLD))
@@ -1742,13 +1760,13 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		switch(H.bodytemperature)
 			if(200 to bodytemp_cold_damage_limit)
 				H.throw_alert("temp", /obj/screen/alert/cold, 1)
-				H.apply_damage(COLD_DAMAGE_LEVEL_1 * coldmod * H.physiology.cold_mod, BURN)
+				H.apply_damage(COLD_DAMAGE_LEVEL_1 * coldmod * H.physiology.cold_mod, BURN, specialtype = DAMAGE_BURN_1STDEGREE)
 			if(120 to 200)
 				H.throw_alert("temp", /obj/screen/alert/cold, 2)
-				H.apply_damage(COLD_DAMAGE_LEVEL_2 * coldmod * H.physiology.cold_mod, BURN)
+				H.apply_damage(COLD_DAMAGE_LEVEL_2 * coldmod * H.physiology.cold_mod, BURN, specialtype = DAMAGE_BURN_2NDDEGREE)
 			else
 				H.throw_alert("temp", /obj/screen/alert/cold, 3)
-				H.apply_damage(COLD_DAMAGE_LEVEL_3 * coldmod * H.physiology.cold_mod, BURN)
+				H.apply_damage(COLD_DAMAGE_LEVEL_3 * coldmod * H.physiology.cold_mod, BURN, specialtype = DAMAGE_BURN_3RDDEGREE)
 
 	// We are not to hot or cold, remove status and moods
 	else
