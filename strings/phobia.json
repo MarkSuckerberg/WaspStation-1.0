@@ -34,8 +34,13 @@
 		"head of security",
 		"hos",
 		"head of personnel",
+<<<<<<< HEAD
 		"head of personnel",
 		"head of research",
+=======
+		"hop",
+		"research director",
+>>>>>>> tg/master
 		"rd",
 		"chief medical officer",
 		"cmo",

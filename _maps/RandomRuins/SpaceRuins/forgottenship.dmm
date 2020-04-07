@@ -418,7 +418,10 @@
 /obj/machinery/mineral/ore_redemption{
 	name = "Syndicate ore redemption machine";
 	ore_multiplier = 4;
+<<<<<<< HEAD
 	ore_pickup_rate = 20;
+=======
+>>>>>>> tg/master
 	req_access = list(150)
 	},
 /turf/open/floor/mineral/plastitanium,
@@ -842,7 +845,11 @@
 /area/ruin/space/has_grav/syndicate_forgotten_cargopod)
 "ct" = (
 /obj/machinery/vending/medical/syndicate_access{
+<<<<<<< HEAD
 	premium = list(/obj/item/reagent_containers/medigel/synthflesh = 2, /obj/item/storage/pill_bottle/psicodine = 2, /obj/item/reagent_containers/hypospray/medipen = 3, /obj/item/storage/belt/medical = 3, /obj/item/sensor_device = 2, /obj/item/pinpointer/crew = 2, /obj/item/storage/firstaid = 5, /obj/item/storage/firstaid/advanced = 2, /obj/item/storage/firstaid/tactical = 1, /obj/item/shears = 1, /obj/item/plunger/reinforced = 2)
+=======
+	premium = list(/obj/item/reagent_containers/medigel/instabitaluri = 2, /obj/item/storage/pill_bottle/psicodine = 2, /obj/item/reagent_containers/hypospray/medipen = 3, /obj/item/storage/belt/medical = 3, /obj/item/sensor_device = 2, /obj/item/pinpointer/crew = 2, /obj/item/storage/firstaid = 5, /obj/item/storage/firstaid/advanced = 2, /obj/item/storage/firstaid/tactical = 1, /obj/item/shears = 1, /obj/item/plunger/reinforced = 2)
+>>>>>>> tg/master
 	},
 /turf/open/floor/plastic,
 /area/ruin/space/has_grav/syndicate_forgotten_ship)

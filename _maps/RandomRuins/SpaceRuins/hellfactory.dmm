@@ -978,6 +978,13 @@
 /obj/machinery/light/floor,
 /obj/effect/turf_decal/bot_white/right,
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
+=======
+/area/ruin/space/has_grav/hellfactory)
+"nd" = (
+/obj/structure/sign/warning/vacuum,
+/turf/closed/wall,
+>>>>>>> tg/master
 /area/ruin/space/has_grav/hellfactory)
 "nT" = (
 /obj/structure/rack,
@@ -993,6 +1000,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/checker,
+/area/ruin/space/has_grav/hellfactory)
+"oJ" = (
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hellfactory)
 "qB" = (
 /obj/item/pressure_plate/hologrid{
@@ -1110,9 +1120,24 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hellfactory)
+<<<<<<< HEAD
 "WZ" = (
 /obj/structure/sign/warning/vacuum,
 /turf/closed/wall,
+=======
+"Yd" = (
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/grimy,
+/area/ruin/space/has_grav/hellfactoryoffice)
+"Zh" = (
+/obj/structure/closet/crate/trashcart,
+/obj/item/stack/sheet/mineral/plasma,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/hellfactory)
+"Zq" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plasteel/dark,
+>>>>>>> tg/master
 /area/ruin/space/has_grav/hellfactory)
 
 (1,1,1) = {"
@@ -1374,8 +1399,13 @@ cV
 by
 Wh
 BC
+<<<<<<< HEAD
 tt
 Ld
+=======
+oJ
+Zq
+>>>>>>> tg/master
 ry
 by
 by
@@ -1392,7 +1422,11 @@ ah
 al
 ao
 aG
+<<<<<<< HEAD
 tN
+=======
+Yd
+>>>>>>> tg/master
 ah
 bg
 aA
@@ -1400,10 +1434,17 @@ bL
 aA
 Wh
 Wh
+<<<<<<< HEAD
 tt
 by
 by
 tt
+=======
+oJ
+by
+by
+oJ
+>>>>>>> tg/master
 Wh
 by
 cw
@@ -1428,8 +1469,13 @@ by
 by
 by
 lR
+<<<<<<< HEAD
 tt
 tt
+=======
+oJ
+oJ
+>>>>>>> tg/master
 uL
 by
 Wh
@@ -1500,7 +1546,11 @@ ah
 ap
 ao
 aK
+<<<<<<< HEAD
 tN
+=======
+Yd
+>>>>>>> tg/master
 ah
 aA
 bn
@@ -1567,7 +1617,11 @@ zI
 EP
 zI
 lv
+<<<<<<< HEAD
 yM
+=======
+Zh
+>>>>>>> tg/master
 cA
 by
 ab
@@ -1597,7 +1651,11 @@ aL
 cr
 cB
 cL
+<<<<<<< HEAD
 WZ
+=======
+nd
+>>>>>>> tg/master
 aa
 aa
 "}

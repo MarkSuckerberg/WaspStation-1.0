@@ -28,7 +28,7 @@
 
 	var/resting = FALSE
 
-	VAR_PROTECTED/lying = 0			///number of degrees. DO NOT USE THIS IN CHECKS. CHECK FOR MOBILITY FLAGS INSTEAD!!
+	VAR_PROTECTED/lying_angle = 0			///number of degrees. DO NOT USE THIS IN CHECKS. CHECK FOR MOBILITY FLAGS INSTEAD!!
 	var/lying_prev = 0		///last value of lying on update_mobility
 
 	var/confused = 0	///Makes the mob move in random directions.
@@ -128,8 +128,11 @@
 	var/list/ownedSoullinks //soullinks we are the owner of
 	var/list/sharedSoullinks //soullinks we are a/the sharer of
 
+<<<<<<< HEAD
 	var/is_busy = FALSE //Waspstation Edit - Curbstomping - Used for random actions that take time. ex: curbstomping. We need to make sure we can only do one of these at a time.
 
+=======
+>>>>>>> tg/master
 	/// List of changes to body temperature, used by desease symtoms like fever
 	var/list/body_temp_changes = list()
 

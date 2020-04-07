@@ -2624,10 +2624,20 @@
 /turf/open/floor/plasteel,
 /area/bridge)
 "aen" = (
+<<<<<<< HEAD
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
+=======
+/obj/structure/table/glass,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/hydroponics)
+>>>>>>> tg/master
 "aeo" = (
 /obj/structure/lattice,
 /obj/structure/grille,
@@ -2789,7 +2799,6 @@
 /turf/open/floor/plating/airless,
 /area/maintenance/starboard/fore)
 "aeH" = (
-/obj/structure/closet/cardboard,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 4
@@ -2798,6 +2807,7 @@
 	dir = 8;
 	pixel_x = 32
 	},
+/obj/machinery/computer/gateway_control,
 /turf/open/floor/plasteel/dark,
 /area/gateway)
 "aeI" = (
@@ -6109,7 +6119,11 @@
 	},
 /mob/living/carbon/monkey,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "ajZ" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
@@ -6309,7 +6323,11 @@
 /obj/structure/flora/junglebush/b,
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "akr" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -7588,6 +7606,25 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/tcommsat/computer)
+<<<<<<< HEAD
+=======
+"amk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/machinery/status_display/evac{
+	pixel_y = 32
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+>>>>>>> tg/master
 "aml" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "chapel maintenance";
@@ -8045,6 +8082,8 @@
 	pixel_y = 2
 	},
 /obj/structure/toilet{
+	cistern = 1;
+	icon_state = "toilet01";
 	pixel_y = 16
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -8109,6 +8148,7 @@
 /turf/open/floor/plasteel/dark,
 /area/maintenance/port)
 "and" = (
+<<<<<<< HEAD
 /obj/structure/table,
 /obj/item/clothing/gloves/color/latex,
 /obj/item/clothing/gloves/color/latex,
@@ -8128,6 +8168,18 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
+=======
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/green{
+	pixel_y = 4
+	},
+/obj/machinery/status_display/evac{
+	pixel_x = -32;
+	pixel_y = 32
+	},
+/turf/open/floor/carpet,
+/area/medical/psychology)
+>>>>>>> tg/master
 "ane" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -9912,6 +9964,7 @@
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/fitness/recreation)
 "apW" = (
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -9928,16 +9981,26 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
+=======
+>>>>>>> tg/master
 /obj/item/radio/intercom{
 	pixel_x = -28;
 	pixel_y = 22
 	},
+<<<<<<< HEAD
 /obj/effect/landmark/start/geneticist,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/structure/chair/comfy/brown{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/medical/psychology)
+>>>>>>> tg/master
 "apX" = (
 /turf/closed/wall/rust,
 /area/maintenance/central)
@@ -10141,6 +10204,7 @@
 /turf/open/floor/plasteel/dark,
 /area/maintenance/fore)
 "aqo" = (
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -10152,6 +10216,10 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/turf/open/floor/carpet,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aqp" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
@@ -10471,6 +10539,7 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "aqP" = (
+<<<<<<< HEAD
 /obj/item/storage/box/rxglasses{
 	pixel_x = 3;
 	pixel_y = 3
@@ -10491,6 +10560,19 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
+=======
+/obj/structure/cable,
+/obj/structure/chair/sofa/left,
+/obj/machinery/power/apc{
+	areastring = "/area/medical/psychology";
+	dir = 1;
+	name = "Psychology APC";
+	pixel_y = 24
+	},
+/obj/item/toy/plush/moth,
+/turf/open/floor/carpet,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aqQ" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -11101,9 +11183,6 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -11534,6 +11613,7 @@
 	},
 /area/maintenance/port/fore)
 "ass" = (
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -11559,6 +11639,11 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/structure/cable,
+/turf/open/floor/carpet,
+/area/medical/psychology)
+>>>>>>> tg/master
 "ast" = (
 /obj/structure/chair/pew/left{
 	dir = 8
@@ -12433,8 +12518,8 @@
 /area/medical/virology)
 "atL" = (
 /obj/machinery/door/airlock/maintenance{
-	name = "genetics maintenance";
-	req_access_txt = "5; 9; 68"
+	name = "psychology maintenance";
+	req_access_txt = "70"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12454,7 +12539,11 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "atN" = (
 /obj/structure/flora/tree/jungle/small,
 /obj/structure/disposalpipe/segment{
@@ -12462,7 +12551,11 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "atO" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -12491,7 +12584,11 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "atR" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/flora/ausbushes/fernybush,
@@ -12502,7 +12599,11 @@
 /obj/structure/cable,
 /mob/living/carbon/monkey,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "atS" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -12517,8 +12618,13 @@
 	},
 /obj/effect/turf_decal/stripes/corner,
 /obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1,
 /turf/open/floor/plasteel/showroomfloor,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "atT" = (
 /turf/closed/wall/r_wall,
 /area/bridge)
@@ -12654,12 +12760,31 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/box,
 /obj/machinery/sleeper{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
+=======
+/turf/open/floor/plasteel/showroomfloor,
+/area/science/genetics)
+"auc" = (
+/obj/structure/table/glass,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/hydroponics)
+>>>>>>> tg/master
 "aud" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
@@ -12945,11 +13070,26 @@
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/corner,
+<<<<<<< HEAD
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/effect/turf_decal/tile/blue,
+/obj/structure/table/wood,
+/obj/machinery/computer/med_data/laptop{
+	dir = 1;
+	pixel_y = 4
+	},
+/obj/machinery/light_switch{
+	pixel_y = -24
+	},
+/obj/machinery/light,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "auB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -13443,12 +13583,12 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 1
-	},
 /obj/effect/landmark/xeno_spawn,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
@@ -13523,7 +13663,11 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "avy" = (
 /obj/structure/table/wood,
 /obj/item/clipboard,
@@ -13548,8 +13692,8 @@
 	dir = 8
 	},
 /obj/machinery/door/window/westleft{
-	name = "Monkey Pen";
-	req_access_txt = "9"
+	name = "Soothing Nature Exhibit";
+	req_access_txt = "70"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -13557,7 +13701,11 @@
 /obj/effect/turf_decal/delivery,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "avC" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -13580,14 +13728,21 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/landmark/start/geneticist,
 /obj/effect/decal/cleanable/dirt,
+=======
+>>>>>>> tg/master
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "avD" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -13658,7 +13813,11 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "avH" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/delivery,
@@ -13686,15 +13845,29 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1,
 /obj/effect/landmark/event_spawn,
 /obj/effect/landmark/start/geneticist,
+=======
+/obj/structure/cable,
+>>>>>>> tg/master
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
+<<<<<<< HEAD
 /obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8
+	},
+/obj/structure/chair/office/light,
+/obj/effect/landmark/start/psychologist,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "avJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/light/small{
@@ -13729,12 +13902,20 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1{
-	dir = 1
-	},
 /obj/structure/cable,
+<<<<<<< HEAD
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1{
+	dir = 4
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "avM" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral{
@@ -13876,14 +14057,14 @@
 /obj/effect/turf_decal/stripes/white/corner{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "avU" = (
@@ -13912,14 +14093,14 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/effect/landmark/start/medical_doctor,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "avX" = (
@@ -13936,14 +14117,14 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/effect/landmark/event_spawn,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "avY" = (
@@ -13980,12 +14161,12 @@
 /obj/effect/turf_decal/stripes/white/corner{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/junction/yjunction,
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 10
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "awa" = (
@@ -14396,6 +14577,27 @@
 "awD" = (
 /turf/closed/wall,
 /area/crew_quarters/fitness/recreation)
+<<<<<<< HEAD
+=======
+"awE" = (
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/airalarm{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+>>>>>>> tg/master
 "awF" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -14590,7 +14792,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
 /obj/structure/cable,
 /turf/open/floor/plasteel/showroomfloor,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "awZ" = (
 /turf/closed/wall/rust,
 /area/security/checkpoint/engineering)
@@ -14622,7 +14828,14 @@
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/cable,
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
+>>>>>>> tg/master
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "axe" = (
@@ -15918,13 +16131,24 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
+<<<<<<< HEAD
 /obj/machinery/door/airlock/medical/glass{
 	name = "Genetics";
 	req_access_txt = "5; 9; 68"
 	},
+=======
+>>>>>>> tg/master
 /obj/structure/cable,
+/obj/machinery/door/airlock/medical{
+	name = "Psychology";
+	req_access_txt = "70"
+	},
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "azg" = (
 /obj/structure/table,
 /obj/item/hand_labeler,
@@ -15945,7 +16169,12 @@
 	pixel_y = 2
 	},
 /obj/structure/disposalpipe/segment,
+<<<<<<< HEAD
 /obj/structure/cable,
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
+>>>>>>> tg/master
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "azi" = (
@@ -16498,7 +16727,12 @@
 	req_access_txt = "5"
 	},
 /obj/structure/disposalpipe/segment,
+<<<<<<< HEAD
 /obj/structure/cable,
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
+>>>>>>> tg/master
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
 "aAa" = (
@@ -17007,7 +17241,16 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
+<<<<<<< HEAD
 /obj/structure/cable,
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 9
+	},
+>>>>>>> tg/master
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics/cloning)
 "aAL" = (
@@ -17247,6 +17490,7 @@
 /turf/open/floor/plasteel,
 /area/gateway)
 "aBi" = (
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -17268,6 +17512,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aBj" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -19641,7 +19890,11 @@
 	pixel_x = -24
 	},
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "aFc" = (
 /turf/open/floor/engine/co2{
 	initial_gas_mix = "co2=1000;TEMP=293.15"
@@ -19833,6 +20086,9 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
+/obj/structure/sign/departments/psychology{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/cryo)
 "aFs" = (
@@ -19854,6 +20110,9 @@
 /obj/effect/turf_decal/tile/blue,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics/cloning)
@@ -19884,14 +20143,15 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "aFx" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
 /obj/structure/disposalpipe/junction/flip{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 9
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics/cloning)
@@ -21860,9 +22120,6 @@
 /turf/open/floor/engine,
 /area/tcommsat/computer)
 "aIB" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
@@ -21870,11 +22127,8 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
-	dir = 10
+	dir = 6
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/morgue)
@@ -23438,7 +23692,11 @@
 	name = "curious george"
 	},
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "aKW" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/holopad,
@@ -24131,6 +24389,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
 "aMd" = (
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -24138,6 +24397,13 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1,
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/effect/landmark/event_spawn,
+/obj/machinery/holopad,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aMe" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
@@ -25242,6 +25508,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/newscaster{
+	pixel_x = 30;
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics/cloning)
 "aNK" = (
@@ -25279,6 +25549,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/corner{
@@ -25286,6 +25557,11 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/structure/filingcabinet/filingcabinet,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aNN" = (
 /turf/closed/wall/r_wall/rust,
 /area/medical/morgue)
@@ -25312,6 +25588,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue,
+<<<<<<< HEAD
 /obj/item/clipboard,
 /obj/item/folder/white,
 /obj/item/storage/pill_bottle/mutadone{
@@ -25322,6 +25599,24 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/effect/turf_decal/tile/blue,
+/obj/structure/table/wood,
+/obj/item/paper_bin/carbon{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/pen,
+/obj/item/folder/white{
+	pixel_x = 14;
+	pixel_y = 3
+	},
+/obj/structure/noticeboard{
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aNT" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 9
@@ -25389,8 +25684,23 @@
 	dir = 8;
 	pixel_x = 24
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/machinery/disposal/bin,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/camera{
+	c_tag = "Medbay Psychology Office";
+	dir = 8;
+	name = "medical camera";
+	network = list("ss13","medical")
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aNW" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -25448,11 +25758,19 @@
 "aOa" = (
 /obj/structure/flora/junglebush/b,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
 "aOb" = (
 /obj/structure/flora/junglebush/large,
 /turf/open/floor/grass,
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+"aOb" = (
+/obj/structure/flora/junglebush/large,
+/turf/open/floor/grass,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aOc" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/grassybush,
@@ -25461,7 +25779,11 @@
 	dir = 9
 	},
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "aOd" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -25586,8 +25908,17 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
+=======
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/psychology,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aOm" = (
 /obj/item/toy/beach_ball{
 	pixel_y = 6
@@ -25596,7 +25927,11 @@
 	dir = 4
 	},
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "aOn" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
@@ -25655,7 +25990,11 @@
 	},
 /mob/living/carbon/monkey,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "aOr" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -25751,6 +26090,7 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/mixing)
 "aOx" = (
+<<<<<<< HEAD
 /obj/machinery/computer/scan_consolenew{
 	dir = 8
 	},
@@ -25767,12 +26107,27 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+=======
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+>>>>>>> tg/master
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
+=======
+/obj/effect/turf_decal/tile/blue,
+/obj/structure/bookcase/random/reference,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aOy" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "bar maintenance";
@@ -25859,7 +26214,11 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /mob/living/carbon/monkey,
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "aOD" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /obj/effect/turf_decal/box/corners{
@@ -25880,7 +26239,11 @@
 	pixel_y = 5
 	},
 /turf/open/floor/grass,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "aOF" = (
 /obj/machinery/door/firedoor/heavy,
 /obj/effect/turf_decal/caution/stand_clear,
@@ -25890,9 +26253,6 @@
 "aOG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
-	dir = 9
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -25905,6 +26265,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1,
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics/cloning)
 "aOH" = (
@@ -26250,6 +26611,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 6
+	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics/cloning)
 "aPe" = (
@@ -26262,8 +26629,19 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
+=======
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aPf" = (
 /turf/closed/wall/rust,
 /area/medical/virology)
@@ -26470,12 +26848,23 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/medical/genetics)
+=======
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue,
+/obj/structure/reagent_dispensers/water_cooler,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aPv" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -28669,7 +29058,7 @@
 /area/medical/medbay/central)
 "aSv" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access_txt = "12"
+	req_access_txt = "12;70"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
@@ -30655,19 +31044,8 @@
 /turf/open/floor/plasteel/dark,
 /area/medical/virology)
 "aVj" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/grunge{
-	name = "Morgue";
-	req_access_txt = "9"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/medical/morgue)
+/turf/closed/wall/r_wall,
+/area/medical/psychology)
 "aVk" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
@@ -31345,6 +31723,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/blue,
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
@@ -31356,6 +31735,15 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/genetics)
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/obj/effect/turf_decal/tile/blue,
+/obj/item/kirbyplants/random,
+/turf/open/floor/plasteel/showroomfloor,
+/area/medical/psychology)
+>>>>>>> tg/master
 "aWg" = (
 /obj/structure/bodycontainer/morgue{
 	dir = 8
@@ -31443,11 +31831,12 @@
 /area/medical/medbay/central)
 "aWm" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/sign/warning/securearea{
-	pixel_y = 32
-	},
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/medical/genetics)
+=======
+/area/medical/psychology)
+>>>>>>> tg/master
 "aWn" = (
 /obj/structure/chair/sofa/right{
 	color = "#c45c57";
@@ -31560,9 +31949,6 @@
 "aWu" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
-	},
-/obj/effect/turf_decal/stripes/corner{
-	dir = 1
 	},
 /obj/machinery/light_switch{
 	pixel_x = -24
@@ -32068,14 +32454,10 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
-/obj/item/radio{
-	desc = "An old handheld radio. You could use it, if you really wanted to.";
-	icon_state = "radio";
-	name = "old radio"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/displaycase/forsale,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/bar)
 "aXn" = (
@@ -34125,9 +34507,6 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/crew_quarters/theatre)
 "bad" = (
-/obj/machinery/computer/rdconsole/robotics{
-	dir = 8
-	},
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -34142,6 +34521,9 @@
 	name = "Robotics RC";
 	pixel_x = 30;
 	receive_ore_updates = 1
+	},
+/obj/machinery/computer/rdconsole/production{
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
@@ -36562,9 +36944,6 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/mixing)
 "bdG" = (
-/obj/machinery/computer/rdconsole/core{
-	dir = 4
-	},
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -36577,6 +36956,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/machinery/computer/rdconsole/production{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/lab)
 "bdH" = (
@@ -42994,17 +43376,6 @@
 /obj/machinery/status_display/evac,
 /turf/closed/wall,
 /area/hydroponics)
-"bmG" = (
-/obj/structure/table/glass,
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/machinery/plantgenes{
-	pixel_y = 5
-	},
-/turf/open/floor/plasteel/dark,
-/area/hydroponics)
 "bmH" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/tile/red{
@@ -43136,6 +43507,7 @@
 	name = "Hallway Hatch"
 	},
 /obj/structure/window/reinforced,
+/obj/item/reagent_containers/food/snacks/pie/cream,
 /turf/open/floor/plating,
 /area/crew_quarters/kitchen)
 "bmT" = (
@@ -44227,11 +44599,11 @@
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/firedoor,
-/obj/item/reagent_containers/food/snacks/pie/cream,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "kitchen";
 	name = "Serving Hatch"
 	},
+/obj/structure/displaycase/forsale,
 /turf/open/floor/plating,
 /area/crew_quarters/kitchen)
 "box" = (
@@ -45744,23 +46116,6 @@
 /mob/living/simple_animal/hostile/asteroid/hivelord,
 /turf/open/floor/plating,
 /area/quartermaster/warehouse)
-"bqG" = (
-/obj/structure/table/glass,
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/machinery/plantgenes{
-	pixel_y = 5
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/stripes/corner{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/hydroponics)
 "bqH" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -48860,9 +49215,6 @@
 /turf/open/floor/plasteel/dark,
 /area/library)
 "bvh" = (
-/obj/machinery/computer/prisoner{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -48876,6 +49228,9 @@
 	pixel_x = -30
 	},
 /obj/structure/cable,
+/obj/machinery/computer/rdconsole/core{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "bvi" = (
@@ -49341,7 +49696,7 @@
 "bvV" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Service Production";
-	req_one_access_txt = "25;26;35;28;22;37;46;38"
+	req_one_access_txt = "25;26;35;28;22;37;46;38;70"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -74439,7 +74794,13 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+<<<<<<< HEAD
 /obj/structure/cable,
+=======
+/obj/structure/cable/multilayer{
+	cable_layer = 6
+	},
+>>>>>>> tg/master
 /turf/open/floor/engine,
 /area/ai_monitored/storage/satellite)
 "cic" = (
@@ -81589,6 +81950,25 @@
 	icon_state = "panelscorched"
 	},
 /area/maintenance/disposal)
+<<<<<<< HEAD
+=======
+"ctz" = (
+/obj/effect/turf_decal/box/corners{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+>>>>>>> tg/master
 "ctA" = (
 /turf/closed/wall/rust,
 /area/maintenance/solars/port/fore)
@@ -81641,6 +82021,27 @@
 	},
 /turf/closed/wall,
 /area/maintenance/starboard/fore)
+<<<<<<< HEAD
+=======
+"ctK" = (
+/obj/effect/turf_decal/box/corners{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/camera{
+	c_tag = "Gateway";
+	name = "command camera"
+	},
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+>>>>>>> tg/master
 "ctL" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden/layer1{
@@ -83001,6 +83402,20 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/main)
+<<<<<<< HEAD
+=======
+"cvM" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/greenglow,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+>>>>>>> tg/master
 "cvN" = (
 /obj/machinery/gateway/centerstation,
 /obj/effect/decal/cleanable/dirt,
@@ -83008,6 +83423,18 @@
 	luminosity = 2
 	},
 /area/gateway)
+<<<<<<< HEAD
+=======
+"cvO" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/greenglow,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+>>>>>>> tg/master
 "cvP" = (
 /obj/machinery/door/poddoor{
 	id = "trash";
@@ -83060,6 +83487,30 @@
 	},
 /turf/open/floor/plasteel,
 /area/gateway)
+<<<<<<< HEAD
+=======
+"cvT" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/greenglow,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+"cvU" = (
+/obj/effect/turf_decal/box/corners,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+>>>>>>> tg/master
 "cvV" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/bot,
@@ -86909,6 +87360,8 @@
 	pixel_y = 2
 	},
 /obj/structure/toilet{
+	cistern = 1;
+	icon_state = "toilet01";
 	pixel_y = 16
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -90504,6 +90957,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/bag/trash,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "cIq" = (
@@ -93678,6 +94132,8 @@
 	pixel_y = 2
 	},
 /obj/structure/toilet{
+	cistern = 1;
+	icon_state = "toilet01";
 	pixel_y = 16
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -93787,6 +94243,7 @@
 /obj/machinery/holopad/secure,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain)
+<<<<<<< HEAD
 "fyD" = (
 /obj/effect/turf_decal/box/corners{
 	dir = 1
@@ -93831,6 +94288,27 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/gateway)
+=======
+"fSn" = (
+/turf/closed/wall/r_wall/rust,
+/area/medical/psychology)
+"gXk" = (
+/obj/structure/table/wood,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/item/radio{
+	desc = "An old handheld radio. You could use it, if you really wanted to.";
+	icon_state = "radio";
+	name = "old radio"
+	},
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/bar)
+"jtY" = (
+/turf/closed/wall/rust,
+/area/medical/psychology)
+>>>>>>> tg/master
 "llk" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -93915,6 +94393,13 @@
 /obj/structure/flora/rock,
 /turf/open/floor/plating/asteroid/lowpressure,
 /area/space/nearstation)
+"rai" = (
+/obj/structure/chair/sofa/right,
+/obj/structure/sign/poster/official/love_ian{
+	pixel_y = 32
+	},
+/turf/open/floor/carpet,
+/area/medical/psychology)
 "rkn" = (
 /obj/item/stack/cable_coil,
 /turf/open/floor/plating/asteroid/airless,
@@ -93993,6 +94478,9 @@
 /mob/living/simple_animal/hostile/asteroid/hivelord,
 /turf/open/floor/plating/asteroid/lowpressure,
 /area/space/nearstation)
+"yio" = (
+/turf/closed/wall,
+/area/medical/psychology)
 
 (1,1,1) = {"
 aaa
@@ -111835,11 +112323,19 @@ cxf
 cxw
 aar
 apY
+<<<<<<< HEAD
 mvO
 mvO
 atL
 nuI
 mvO
+=======
+yio
+yio
+atL
+jtY
+yio
+>>>>>>> tg/master
 aPA
 azU
 aAE
@@ -112092,7 +112588,11 @@ cxf
 cxw
 cxN
 apZ
+<<<<<<< HEAD
 mvO
+=======
+yio
+>>>>>>> tg/master
 ajY
 atM
 aFb
@@ -112349,7 +112849,11 @@ cwp
 cxx
 cxG
 aqa
+<<<<<<< HEAD
 nuI
+=======
+jtY
+>>>>>>> tg/master
 aOa
 atN
 aOC
@@ -112606,7 +113110,11 @@ cwp
 cwq
 cwy
 aqb
+<<<<<<< HEAD
 mvO
+=======
+yio
+>>>>>>> tg/master
 aOb
 atQ
 aOE
@@ -112863,7 +113371,11 @@ cwq
 cwp
 anP
 aqe
+<<<<<<< HEAD
 mvO
+=======
+yio
+>>>>>>> tg/master
 akq
 atR
 avx
@@ -113120,11 +113632,19 @@ bgN
 cwp
 anQ
 ail
+<<<<<<< HEAD
 aNt
 aWm
 nkO
 avB
 nkO
+=======
+fSn
+aWm
+aWm
+avB
+aWm
+>>>>>>> tg/master
 aPA
 abl
 agH
@@ -113376,13 +113896,22 @@ ajI
 alb
 cwq
 anR
+<<<<<<< HEAD
 uZY
 uZY
+=======
+aVj
+aVj
+>>>>>>> tg/master
 aOl
 aPe
 avC
 aNM
+<<<<<<< HEAD
 nkO
+=======
+yio
+>>>>>>> tg/master
 aNR
 aOj
 aOp
@@ -113633,13 +114162,21 @@ cvv
 cvJ
 amh
 anV
+<<<<<<< HEAD
 uZY
+=======
+aVj
+>>>>>>> tg/master
 and
 apW
 aBi
 avG
 aNS
+<<<<<<< HEAD
 mvO
+=======
+yio
+>>>>>>> tg/master
 aOe
 aJW
 aOh
@@ -113890,13 +114427,22 @@ cvk
 czM
 cwy
 anW
+<<<<<<< HEAD
 aNt
 and
+=======
+fSn
+rai
+>>>>>>> tg/master
 aqo
 aMd
 avI
 auA
+<<<<<<< HEAD
 nuI
+=======
+jtY
+>>>>>>> tg/master
 aOd
 aNT
 aPh
@@ -114147,7 +114693,11 @@ arT
 cxA
 czL
 anX
+<<<<<<< HEAD
 aNt
+=======
+fSn
+>>>>>>> tg/master
 aqP
 ass
 atS
@@ -114404,13 +114954,22 @@ cvI
 cxB
 cwp
 ajv
+<<<<<<< HEAD
 uZY
 uZY
+=======
+aVj
+aVj
+>>>>>>> tg/master
 aOx
 aPu
 aWf
 aNV
+<<<<<<< HEAD
 nkO
+=======
+yio
+>>>>>>> tg/master
 aFr
 aNY
 aOv
@@ -114665,7 +115224,7 @@ aiM
 asi
 aNN
 asi
-aVj
+aNN
 asi
 aNH
 aVH
@@ -120075,7 +120634,7 @@ aKK
 cfa
 btE
 aXm
-btX
+gXk
 bva
 aYv
 btX
@@ -128312,7 +128871,7 @@ boA
 aGr
 bkF
 bjn
-bmG
+aen
 bsu
 bny
 bnJ
@@ -128826,7 +129385,7 @@ boD
 aGM
 boV
 bjn
-bqG
+auc
 bsu
 bny
 bnJ

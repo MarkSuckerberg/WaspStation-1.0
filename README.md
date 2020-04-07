@@ -143,6 +143,7 @@ Web delivery of game resources makes it quicker for players to join and reduces 
 ## CONTRIBUTING
 
 [Documenting your code](.github/AUTODOC_GUIDE.md)
+[Policy configuration system](.github/POLICYCONFIG.md)
 
 ## CODEBASE CREDITS
 

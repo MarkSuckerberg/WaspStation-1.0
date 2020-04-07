@@ -12,6 +12,7 @@ import { AtmosControlConsole } from './interfaces/AtmosControlConsole';
 import { AtmosFilter } from './interfaces/AtmosFilter';
 import { AtmosMixer } from './interfaces/AtmosMixer';
 import { AtmosPump } from './interfaces/AtmosPump';
+import { AutomatedAnnouncement } from './interfaces/AutomatedAnnouncement';
 import { BankMachine } from './interfaces/BankMachine';
 import { Bepis } from './interfaces/Bepis';
 import { BlackmarketUplink } from './interfaces/BlackmarketUplink';
@@ -48,7 +49,10 @@ import { EightBallVote } from './interfaces/EightBallVote';
 import { Electropack } from './interfaces/Electropack';
 import { EmergencyShuttleConsole } from './interfaces/EmergencyShuttleConsole';
 import { EngravedMessage } from './interfaces/EngravedMessage';
+<<<<<<< HEAD
 import { FaxMachine } from './interfaces/FaxMachine';
+=======
+>>>>>>> tg/master
 import { ExosuitControlConsole } from './interfaces/ExosuitControlConsole';
 import { Gateway } from './interfaces/Gateway';
 import { Gps } from './interfaces/Gps';
@@ -77,6 +81,10 @@ import { NaniteProgrammer } from './interfaces/NaniteProgrammer';
 import { NaniteRemote } from './interfaces/NaniteRemote';
 import { NotificationPreferences } from './interfaces/NotificationPreferences';
 import { NtnetRelay } from './interfaces/NtnetRelay';
+<<<<<<< HEAD
+=======
+import { NtosAtmos } from './interfaces/NtosAtmos';
+>>>>>>> tg/master
 import { NtosArcade } from './interfaces/NtosArcade';
 import { NtosCard } from './interfaces/NtosCard';
 import { NtosConfiguration } from './interfaces/NtosConfiguration';
@@ -179,6 +187,10 @@ const ROUTES = {
   },
   atmos_pump: {
     component: () => AtmosPump,
+    scrollable: false,
+  },
+  announcement_system: {
+    component: () => AutomatedAnnouncement,
     scrollable: false,
   },
   bepis: {
@@ -331,10 +343,13 @@ const ROUTES = {
     component: () => EngravedMessage,
     scrollable: false,
   },
+<<<<<<< HEAD
   faxmachine: {
     component: () => FaxMachine,
     scrollable: false,
   },
+=======
+>>>>>>> tg/master
   exosuit_control_console: {
     component: () => ExosuitControlConsole,
     scrollable: true,
@@ -455,6 +470,15 @@ const ROUTES = {
   },
   ntos_ai_restorer: {
     component: () => AiRestorer,
+<<<<<<< HEAD
+=======
+    wrapper: () => NtosWrapper,
+    scrollable: true,
+    theme: 'ntos',
+  },
+  ntos_atmos: {
+    component: () => NtosAtmos,
+>>>>>>> tg/master
     wrapper: () => NtosWrapper,
     scrollable: true,
     theme: 'ntos',
