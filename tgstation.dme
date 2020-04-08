@@ -3067,6 +3067,7 @@
 #include "waspstation\code\game\objects\items\devices\radio\encryptionkey.dm"
 #include "waspstation\code\game\objects\items\devices\radio\headset.dm"
 #include "waspstation\code\game\objects\items\stacks\medical.dm"
+#include "waspstation\code\game\objects\items\stacks\wound_treatment.dm"
 #include "waspstation\code\game\objects\items\storage\backpack.dm"
 #include "waspstation\code\game\objects\items\storage\bags.dm"
 #include "waspstation\code\game\objects\items\storage\fancy.dm"
@@ -3129,6 +3130,7 @@
 #include "waspstation\code\modules\surgery\_wounds.dm"
 #include "waspstation\code\modules\surgery\bandaging.dm"
 #include "waspstation\code\modules\surgery\bodyparts\helpers.dm"
+#include "waspstation\code\modules\surgery\bodyparts\wounds.dm"
 #include "waspstation\code\modules\uplink\uplink_items.dm"
 #include "waspstation\code\modules\vehicles\pimpin_ride.dm"
 // END_INCLUDE

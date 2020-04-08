@@ -182,30 +182,30 @@
 
 
 	//Brute wounds
-	if((brute > wound_threshold) && prob(100))
+	if((brute > wound_threshold) && prob((brute / 1.5) * woundmod))
 		switch(specialtype)
 			if(DAMAGE_BRUTE_LACERATE) //Moderate cut
 				if(!haswound("cut"))
-					AddComponent(/datum/component/wound, woundtype = "cut", wound_msg = "A cut is opened on your [src.name]!", pain_chance = 10, heal_chance = 10, initial_pain = 5, irritate_chance = 10, irritate_pain = 2, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute)
+					AddComponent(/datum/component/wound, woundtype = "cut", wound_msg = "A cut is opened on your [src.name]!", pain_chance = 10, heal_chance = 10, initial_pain = 5, irritate_chance = 3, irritate_pain = 2, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute)
 			else if(DAMAGE_BRUTE_PUNCTURE) //Moderate hole
 				if(!haswound("gash"))
-					AddComponent(/datum/component/wound, woundtype = "gash", wound_msg = "A gash opens on your [src.name]!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 5, irritate_pain = 3, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute)
+					AddComponent(/datum/component/wound, woundtype = "gash", wound_msg = "A gash opens on your [src.name]!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 2, irritate_pain = 3, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute)
 			else if(DAMAGE_BRUTE_BLUNTOBJ) //Moderate bruise
 				if(!haswound("bruise"))
-					AddComponent(/datum/component/wound, woundtype = "bruise", wound_msg = "Your [src.name] begins to bruise!", pain_chance = 10, heal_chance = 5, initial_pain = 2, irritate_chance = 15, irritate_pain = 5, max_irritate_pain = 10, damage_type_initial = brute, damage_type = brute)
+					AddComponent(/datum/component/wound, woundtype = "bruise", wound_msg = "Your [src.name] begins to bruise!", pain_chance = 10, heal_chance = 5, initial_pain = 2, irritate_chance = 1, irritate_pain = 5, max_irritate_pain = 10, damage_type_initial = brute, damage_type = brute)
 
 	//Burn wounds
-	if((burn > wound_threshold) && prob(burn * woundmod))
+	if((burn > wound_threshold) && prob((burn / 1.5) * woundmod))
 		switch(specialtype)
 			if(DAMAGE_BURN_1STDEGREE) //Minor burn
 				if(!haswound("singe"))
-					AddComponent(/datum/component/wound, woundtype = "singe", wound_msg = "You singe your [src.name]!", pain_chance = 0, heal_chance = 5, initial_pain = 5, irritate_chance = 10, irritate_pain = 2, damage_type_initial = burn, damage_type = brute)
+					AddComponent(/datum/component/wound, woundtype = "singe", wound_msg = "You singe your [src.name]!", pain_chance = 0, heal_chance = 5, initial_pain = 5, irritate_chance = 2, irritate_pain = 2, damage_type_initial = burn, damage_type = brute)
 			else if(DAMAGE_BURN_2NDDEGREE) //Moderate burns
 				if(!haswound("blister"))
-					AddComponent(/datum/component/wound, woundtype = "blister", wound_msg = "Your [src.name] begins to blister!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 5, irritate_pain = 3, damage_type_initial = burn, damage_type = brute)
+					AddComponent(/datum/component/wound, woundtype = "blister", wound_msg = "Your [src.name] begins to blister!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 1, irritate_pain = 3, damage_type_initial = burn, damage_type = brute)
 			else if(DAMAGE_BURN_3RDDEGREE) //Major burn
 				if(!haswound("blackened skin"))
-					AddComponent(/datum/component/wound, woundtype = "blackened skin", wound_msg = "The skin on your [src.name] begins to peel back and turn black!", pain_chance = 10, heal_chance = 5, initial_pain = 2, irritate_chance = 15, irritate_pain = 5, damage_type_initial = stamina, damage_type = brute)
+					AddComponent(/datum/component/wound, woundtype = "blackened skin", wound_msg = "The skin on your [src.name] begins to peel back and turn black!", pain_chance = 10, heal_chance = 1, initial_pain = 2, irritate_chance = 15, irritate_pain = 5, damage_type_initial = stamina, damage_type = brute)
 
 
 	var/can_inflict = max_damage - get_damage()

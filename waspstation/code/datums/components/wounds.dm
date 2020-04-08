@@ -2,9 +2,10 @@
 	dupe_mode = COMPONENT_DUPE_ALLOWED
 	var/obj/item/bodypart/L
 	var/woundtype ///Type of wound, aka "cut", "bruise", etc. Must be a string.
-	var/wound_msg ///Message shown when wound inflicted, always proceeded by " your [limb name here]!"
+	var/wound_msg ///Message shown when wound inflicted
+	var/list/hurtwords = list("hurts!") ///Message(s) shown when wounds hurt, not really needed but it's fun to have
 
-	var/pain_chance ///Chance of random pain
+	var/pain_chance ///Chance of random pain on process
 	var/remove_pain ///Pain inflicted on removal of the wound. Unused.
 
 	var/heal_chance ///Chance per tick of the wound healing.
@@ -87,7 +88,7 @@
 		if(prob(chance))
 			if(!tended && irritate_pain < max_irritate_pain)
 				irritate_pain++
-				to_chat(victim, "<span class='userdanger'>The [woundtype] on your [L.name] stings and gets worse!</span>")
+				to_chat(victim, "<span class='userdanger'>The [woundtype] on your [L.name] [pick(hurtwords)] and gets worse!</span>")
 			if(tended)
 				tended--
 				if(tended)
@@ -119,7 +120,7 @@
 	if(irritate_pain <= 0)
 		if(remove_pain)
 			L.receive_damage(brute = remove_pain)
-			to_chat(victim, "<span class='danger'>The [woundtype] on your [L.name] hurts, but then seems to heal!</span>")
+			to_chat(victim, "<span class='danger'>The [woundtype] on your [L.name] [pick(hurtwords)], but then seems to heal!</span>")
 		else
 			to_chat(victim, "<span class='notice'>The [woundtype] on your [L.name] seems to have fully healed!</span>")
 
@@ -154,7 +155,7 @@
 				L.receive_damage(stamina = irritate_pain)
 			else
 				L.receive_damage(brute = irritate_pain)
-			to_chat(victim, "<span class='userdanger'>The [woundtype] on your [L.name] hurts!</span>")
+			to_chat(victim, "<span class='userdanger'>The [woundtype] on your [L.name] [pick(hurtwords)]!</span>")
 
 	if(prob(heal_chance))
 		rand_heal(1)
