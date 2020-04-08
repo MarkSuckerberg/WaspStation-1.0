@@ -792,6 +792,8 @@
 // Secondary wounds procs //
 /obj/item/bodypart/proc/haswound(woundtype)
 	for(var/W in wounds)
+		if(!woundtype)
+			return TRUE
 		if(W == woundtype)
 			return TRUE
 	return FALSE

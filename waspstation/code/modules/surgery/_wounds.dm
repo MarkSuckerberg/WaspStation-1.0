@@ -34,7 +34,7 @@
 		display_results(user, target, "<span class='notice'>You finish bandaging [target]'s [parse_zone(target_zone)] with \the [tool].</span>",
 			"<span class='notice'>[user] finishes bandaging [target]'s [parse_zone(target_zone)] with \the [tool].</span>",
 			"<span class='notice'>[user] finishes applying something on [target].</span>")
-		SEND_SIGNAL(H, COMSIG_HUMAN_WOUND_HEAL_SURGERY, I, L, quality, woundtype)
+		SEND_SIGNAL(target, COMSIG_HUMAN_WOUND_HEAL_SURGERY, L, quality, woundtype)
 	else
 		to_chat(user, "<span class='warning'>You can't find [target]'s [parse_zone(user.zone_selected)], let alone bandage it!</span>")
 	return ..()

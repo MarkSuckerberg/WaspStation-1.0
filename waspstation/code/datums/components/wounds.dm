@@ -20,7 +20,7 @@
 	var/tended = 0 ///How good is the wound tended/how long will the tending last if continually irritated?
 
 /datum/component/wound/Initialize(woundtype = "wound",
-	wound_msg = "A wound appears on your [parent.name]!",
+	wound_msg = "A wound appears on your limb!",
 	pain_chance = 0,
 	remove_pain = 0,
 	heal_chance = 0,
@@ -128,12 +128,11 @@
 		to_chat(victim, "<span class='notice'>The [woundtype] on your [L.name] seems to have healed slightly.</span>")
 
 /// This proc handles the final step and actual healing of a wound that was on a human.
-/datum/component/wound/proc/heal_wound(woundtype = src.woundtype)
+/datum/component/wound/proc/heal_wound()
 	var/mob/living/carbon/human/victim = L.owner
 
-	if(!victim.has_wounds())
-		L.wounds -= woundtype
-		SEND_SIGNAL(victim, COMSIG_CLEAR_MOOD_EVENT, "wounded")
+	L.wounds -= woundtype
+	SEND_SIGNAL(victim, COMSIG_CLEAR_MOOD_EVENT, "wounded")
 	qdel(src)
 
 
