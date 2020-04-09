@@ -16,7 +16,7 @@
 	name = "bandage wound"
 	time = 32
 	experience_given = MEDICAL_SKILL_EASY
-	implements = list(/obj/item/stack/medical/gauze = 100, /obj/item/stack/sheet/cloth = 70, /obj/item/stack/packageWrap = 50) //cargo will be bootleg medical, I bet on it
+	implements = list(/obj/item/stack/woundtreat/bandages = 100, /obj/item/stack/sheet/cloth = 70, /obj/item/stack/packageWrap = 50) //cargo will be bootleg medical, I bet on it
 	var/woundtype = "wound"
 	var/quality = 5 //How many irritations the surgery can survive before the wound reopens
 

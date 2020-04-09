@@ -1,9 +1,11 @@
 /obj/item/stack/woundtreat
 	name = "wound treatment stack"
 	desc = "This shouldn't be here, but if you wanna try to treat wounds with it, knock yourself out. Not literally."
+	icon = 'waspstation/icons/obj/stack_objects.dmi'
 	amount = 6
 	max_amount = 6
 	gender = PLURAL
+	tool_behaviour = TOOL_SURGERY_START
 
 /obj/item/stack/woundtreat/bandages
 	name = "bandages"
