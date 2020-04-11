@@ -83,7 +83,7 @@
 
 	if(irritate_chance) //If there's no chance, why check?
 		var/chance = irritate_chance
-		if(victim.m_intent == MOVE_INTENT_WALK || victim.lying)
+		if(victim.m_intent == MOVE_INTENT_WALK || !(M.mobility_flags & MOBILITY_STAND))
 			chance *= 0.5
 		if(prob(chance))
 			if(!tended && irritate_pain < max_irritate_pain)
