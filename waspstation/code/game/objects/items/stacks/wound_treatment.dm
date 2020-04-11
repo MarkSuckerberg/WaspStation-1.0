@@ -21,4 +21,19 @@
 	icon_state = "antibact"
 	grind_results = list(/datum/reagent/medicine/spaceacillin = 1, /datum/reagent/space_cleaner/sterilizine = 1)
 
+/obj/item/stack/woundtreat/stitches
+	name = "stitches"
+	desc = "A set of fine threads and needles used to stitch closed open wounds such as bulletholes and large cuts."
+	singular_name = "stitches"
+	icon_state = "stitch"
+	grind_results = list(/datum/reagent/carbon = 2)
+
+/obj/item/stack/woundtreat/icepack
+	name = "icepacks"
+	desc = "A handy icepack used for the treatment of bruises and burns. It's slightly cold."
+	singular_name = "icepack"
+	icon_state = "icepack"
+	amount = 3
+	max_amount = 3
+	grind_results = list(/datum/reagent/consumable/ice = 5)
 

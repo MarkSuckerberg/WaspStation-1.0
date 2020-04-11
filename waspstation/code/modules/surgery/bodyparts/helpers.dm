@@ -1,15 +1,9 @@
-/mob/living/carbon/proc/remove_all_wounds()
-	var/turf/T = get_turf(src)
-
+/mob/living/carbon/proc/heal_wounds()
 	for(var/X in bodyparts)
 		var/obj/item/bodypart/L = X
-		for(var/obj/item/I in L.embedded_objects)
-			L.embedded_objects -= I
-			I.forceMove(T)
-			I.unembedded()
+		SEND_SIGNAL(src, COMSIG_HUMAN_WOUND_HEAL, L)
 
-	clear_alert("embeddedobject")
-	SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "embedded")
+	SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "wounded")
 
 /mob/living/carbon/proc/has_wounds()
 	. = 0
@@ -18,5 +12,5 @@
 		for(var/I in L.wounds)
 			return 1
 
-/mob/living/carbon/proc/has_wounds_in_part(bodypart)
-	
+/mob/living/carbon/proc/wounds_in_part(var/obj/item/bodypart/L)
+	return L.wounds

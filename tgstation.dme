@@ -3130,8 +3130,10 @@
 #include "waspstation\code\modules\research\designs\autolathe_designs.dm"
 #include "waspstation\code\modules\surgery\_wounds.dm"
 #include "waspstation\code\modules\surgery\bandaging.dm"
+#include "waspstation\code\modules\surgery\blunt.dm"
+#include "waspstation\code\modules\surgery\burn.dm"
+#include "waspstation\code\modules\surgery\stitches.dm"
 #include "waspstation\code\modules\surgery\bodyparts\helpers.dm"
-#include "waspstation\code\modules\surgery\bodyparts\wounds.dm"
 #include "waspstation\code\modules\uplink\uplink_items.dm"
 #include "waspstation\code\modules\vehicles\pimpin_ride.dm"
 // END_INCLUDE

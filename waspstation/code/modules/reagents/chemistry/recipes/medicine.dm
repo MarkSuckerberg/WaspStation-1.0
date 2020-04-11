@@ -72,3 +72,15 @@
 /datum/chemical_reaction/thializid
 	results = list(/datum/reagent/medicine/thializid = 5)
 	required_reagents = list(/datum/reagent/sulfur = 1, /datum/reagent/fluorine = 1, /datum/reagent/toxin = 1, /datum/reagent/nitrous_oxide = 2)
+
+//Wound treatment
+
+/datum/chemical_reaction/antibact
+	required_reagents = list(/datum/reagent/medicine/spaceacillin = 10, /datum/reagent/space_cleaner/sterilizine = 10, /datum/reagent/fuel/oil = 5)
+
+/datum/chemical_reaction/antibact/on_reaction(datum/reagents/holder, created_volume)
+	var/location = get_turf(holder.my_atom)
+	for(var/i = 1, i <= created_volume, i++)
+		new /obj/item/stack/woundtreat/antibact(location)
+	return
+

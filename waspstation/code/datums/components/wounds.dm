@@ -65,11 +65,11 @@
 /datum/component/wound/RegisterWithParent()
 	if(ishuman(L.owner))
 		RegisterSignal(L.owner, COMSIG_MOVABLE_MOVED, .proc/irritate_check)
-		RegisterSignal(L.owner, COMSIG_HUMAN_WOUND_HEAL_SURGERY, .proc/tend)
+		RegisterSignal(L.owner, COMSIG_HUMAN_WOUND_HEAL, .proc/tend)
 
 /datum/component/wound/UnregisterFromParent()
 	if(ishuman(L.owner))
-		UnregisterSignal(L.owner, list(COMSIG_MOVABLE_MOVED, COMSIG_HUMAN_WOUND_HEAL_SURGERY))
+		UnregisterSignal(L.owner, list(COMSIG_MOVABLE_MOVED, COMSIG_HUMAN_WOUND_HEAL))
 
 /datum/component/wound/process()
 	if(ishuman(L.owner))
@@ -100,10 +100,12 @@
 /// Called whenever the wound is treated in surgery.
 /// Halves the amount of pain done every time it's irritated, which, as long as the woundee doesn't reopen it, shouldn't ever happen. Also increases heal chance for quicker healing.
 /// If called in-proc, don't specify the woundtype or it will likely fail to call. This is only to check for if the surgery is the correct one for the wound.
-/datum/component/wound/proc/tend(quality, woundtype = src.woundtype)
+/datum/component/wound/proc/tend(woundtype = src.woundtype, quality = 10)
 
 	if(woundtype != src.woundtype)
 		return
+	if(quality >= 10)
+		rand_heal(irritate_pain)
 
 	irritate_pain = round((irritate_pain / 2))
 	heal_chance = heal_chance * 2
@@ -112,7 +114,7 @@
 
 /// Called when then wound heals.
 /// Heals the pain done by every irritation by the healamnt, and if that results in there being no irritate damage, the wound is healed.
-/datum/component/wound/proc/rand_heal(healamnt = 1, woundtype = src.woundtype)
+/datum/component/wound/proc/rand_heal(healamnt = 1)
 	var/mob/living/carbon/human/victim = L.owner
 
 	irritate_pain = irritate_pain - healamnt
