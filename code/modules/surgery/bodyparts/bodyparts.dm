@@ -188,10 +188,10 @@
 		switch(specialtype)
 			if(DAMAGE_BRUTE_LACERATE) //Moderate cut
 				if(!haswound("cut"))
-					AddComponent(/datum/component/wound, woundtype = "cut", wound_msg = "A cut is opened on your [src.name]!", pain_chance = 10, heal_chance = 10, initial_pain = 5, irritate_chance = 3, irritate_pain = 2, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute)
+					AddComponent(/datum/component/wound, woundtype = "cut", wound_msg = "A cut is opened on your [src.name]!", pain_chance = 10, heal_chance = 10, initial_pain = 5, irritate_chance = 3, irritate_pain = 2, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute, bleed = 1)
 			if(DAMAGE_BRUTE_PUNCTURE) //Moderate hole
 				if(!haswound("gash"))
-					AddComponent(/datum/component/wound, woundtype = "gash", wound_msg = "A gash opens on your [src.name]!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 2, irritate_pain = 3, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute)
+					AddComponent(/datum/component/wound, woundtype = "gash", wound_msg = "A gash opens on your [src.name]!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 2, irritate_pain = 3, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute, bleed = 3)
 			if(DAMAGE_BRUTE_BLUNTOBJ) //Moderate bruise
 				if(!haswound("bruise"))
 					AddComponent(/datum/component/wound, woundtype = "bruise", wound_msg = "Your [src.name] begins to bruise!", pain_chance = 10, heal_chance = 5, initial_pain = 2, irritate_chance = 1, irritate_pain = 5, max_irritate_pain = 10, damage_type_initial = brute, damage_type = brute)
@@ -204,7 +204,7 @@
 					AddComponent(/datum/component/wound, woundtype = "singe", wound_msg = "You singe your [src.name]!", pain_chance = 0, heal_chance = 5, initial_pain = 5, irritate_chance = 2, irritate_pain = 2, damage_type_initial = burn, damage_type = brute)
 			if(DAMAGE_BURN_2NDDEGREE) //Moderate burns
 				if(!haswound("blister"))
-					AddComponent(/datum/component/wound, woundtype = "blister", wound_msg = "Your [src.name] begins to blister!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 1, irritate_pain = 3, damage_type_initial = burn, damage_type = brute)
+					AddComponent(/datum/component/wound, woundtype = "blister", wound_msg = "Your [src.name] begins to blister!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 1, irritate_pain = 3, damage_type_initial = burn, damage_type = brute, bleed = 2)
 			if(DAMAGE_BURN_3RDDEGREE) //Major burn
 				if(!haswound("blackened skin"))
 					AddComponent(/datum/component/wound, woundtype = "blackened skin", wound_msg = "The skin on your [src.name] begins to peel back and turn black!", pain_chance = 10, heal_chance = 1, initial_pain = 2, irritate_chance = 15, irritate_pain = 5, damage_type_initial = stamina, damage_type = brute)

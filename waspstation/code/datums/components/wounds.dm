@@ -3,7 +3,7 @@
 	var/obj/item/bodypart/L
 	var/woundtype ///Type of wound, aka "cut", "bruise", etc. Must be a string.
 	var/wound_msg ///Message shown when wound inflicted
-	var/list/hurtwords = list("hurts!") ///Message(s) shown when wounds hurt, not really needed but it's fun to have
+	var/list/hurtwords = list("hurts") ///Message(s) shown when wounds hurt, not really needed but it's fun to have
 
 	var/pain_chance ///Chance of random pain on process
 	var/remove_pain ///Pain inflicted on removal of the wound. Unused.
@@ -29,6 +29,7 @@
 	irritate_chance = 0,
 	irritate_pain = 0,
 	max_irritate_pain = 7,
+	bleed = 0,
 	damage_type_initial = BRUTE,
 	damage_type = BRUTE)
 
@@ -46,6 +47,7 @@
 	src.irritate_chance = irritate_chance
 	src.irritate_pain = irritate_pain
 	src.max_irritate_pain = max_irritate_pain
+	src.bleed = bleed
 	src.damage_type_initial = damage_type_initial
 	src.damage_type = damage_type
 
@@ -83,7 +85,7 @@
 
 	if(irritate_chance) //If there's no chance, why check?
 		var/chance = irritate_chance
-		if(victim.m_intent == MOVE_INTENT_WALK || !(M.mobility_flags & MOBILITY_STAND))
+		if(victim.m_intent == MOVE_INTENT_WALK || !(victim.mobility_flags & MOBILITY_STAND))
 			chance *= 0.5
 		if(prob(chance))
 			if(!tended && irritate_pain < max_irritate_pain)
@@ -101,12 +103,15 @@
 /// Halves the amount of pain done every time it's irritated, which, as long as the woundee doesn't reopen it, shouldn't ever happen. Also increases heal chance for quicker healing.
 /// If called in-proc, don't specify the woundtype or it will likely fail to call. This is only to check for if the surgery is the correct one for the wound.
 /datum/component/wound/proc/tend(woundtype = src.woundtype, quality = 10)
-
+	var/mob/living/carbon/human/victim = L.owner
+	
 	if(woundtype != src.woundtype)
 		return
 	if(quality >= 10)
 		rand_heal(irritate_pain)
+		return
 
+	to_chat(victim, "<span class='notice'>You feel relief as your [woundtype] gets bandaged.</span>")
 	irritate_pain = round((irritate_pain / 2))
 	heal_chance = heal_chance * 2
 	tended = quality
@@ -157,7 +162,7 @@
 				L.receive_damage(stamina = irritate_pain)
 			else
 				L.receive_damage(brute = irritate_pain)
-			to_chat(victim, "<span class='userdanger'>The [woundtype] on your [L.name] [pick(hurtwords)]!</span>")
+			to_chat(victim, "<span class='danger'>The [woundtype] on your [L.name] [pick(hurtwords)]!</span>")
 
 	if(prob(heal_chance))
 		rand_heal(1)
