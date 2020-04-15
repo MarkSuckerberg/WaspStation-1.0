@@ -31,3 +31,15 @@
 	)
 	category = CAT_MEDICAL
 	subcategory = CAT_WOUNDTREAT
+
+/datum/crafting_recipe/emitcannon
+	name = "Emitter Cannon"
+	reqs = list(
+		/obj/item/circuitboard/machine/emitter = 1,
+		/obj/item/stock_parts/micro_laser = 4,
+		/obj/item/weaponcrafting/receiver = 1,
+		/obj/item/stack/packageWrap = 4)
+	result = /obj/item/gun/energy/e_gun/emitcannon
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+

@@ -9,8 +9,12 @@
 	max_integrity = 50
 	layer = LATTICE_LAYER //under pipes
 	plane = FLOOR_PLANE
-	smooth = SMOOTH_TRUE
-	canSmoothWith = list(/obj/structure/railing, /turf/closed/wall, /turf/open/floor/plasteel)
+	smooth = SMOOTH_MORE
+	canSmoothWith = list(/obj/structure/catwalk,
+	/turf/open/floor,
+	/turf/closed/wall,
+	/obj/structure/falsewall,
+	/obj/structure/window)
 	obj_flags = CAN_BE_HIT | BLOCK_Z_FALL
 	var/number_of_rods = 2
 	var/hatch_open = FALSE
@@ -51,7 +55,7 @@
 		I.color = plated_tile.color
 		overlays += I
 	else
-		smooth = SMOOTH_TRUE
+		smooth = SMOOTH_MORE
 
 /obj/structure/catwalk/examine(mob/user)
 	. = ..()
