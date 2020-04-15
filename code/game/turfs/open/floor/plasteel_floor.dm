@@ -173,6 +173,7 @@
 /turf/open/floor/plasteel/stairs
 	icon_state = "stairs"
 	tiled_dirt = FALSE
+	icon = 'icons/turf/floors.dmi'	
 /turf/open/floor/plasteel/stairs/left
 	icon_state = "stairs-l"
 /turf/open/floor/plasteel/stairs/medium

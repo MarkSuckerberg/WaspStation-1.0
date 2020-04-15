@@ -2,6 +2,7 @@
 /turf/open/floor/engine/hull
 	name = "exterior hull plating"
 	desc = "Sturdy exterior hull plating that separates you from the uncaring vacuum of space."
+	icon = 'icons/turf/floors.dmi'	
 	icon_state = "regular_hull"
 	initial_gas_mix = AIRLESS_ATMOS
 	temperature = TCMB

@@ -13,10 +13,8 @@
 	desc = "The framework of an emitter haphazardly attached to a trigger assembly. What could go wrong?"
 	icon = 'waspstation/icons/obj/guns/energy.dmi'
 	icon_state = "emitgun"
-	item_state = "emitgun"
 	force = 15
 	ammo_type = list(/obj/item/ammo_casing/energy/emitter)
-	fire_delay = 15
 	weapon_weight = WEAPON_HEAVY
 	var/wielded = FALSE
 

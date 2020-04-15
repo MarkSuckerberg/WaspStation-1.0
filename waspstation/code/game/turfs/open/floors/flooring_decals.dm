@@ -94,6 +94,7 @@ var/list/floor_decals = list()
 
 /obj/effect/floor_decal/corner
 	icon_state = "corner_white"
+	layer = TURF_PLATING_DECAL_LAYER
 	alpha = 229
 
 /obj/effect/floor_decal/corner/neutral
