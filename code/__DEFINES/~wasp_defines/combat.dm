@@ -1,0 +1,11 @@
+// Flags for attack special types
+#define DAMAGE_NONE 			1
+
+#define DAMAGE_BRUTE_LACERATE 	2
+#define DAMAGE_BRUTE_PUNCTURE 	3
+#define DAMAGE_BRUTE_BLUNTOBJ 	4
+
+#define DAMAGE_BURN_1STDEGREE 	5
+#define DAMAGE_BURN_2NDDEGREE 	6
+#define DAMAGE_BURN_3RDDEGREE 	7
+#define DAMAGE_BURN_4THDEGREE 	8

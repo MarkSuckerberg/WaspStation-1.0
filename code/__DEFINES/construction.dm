@@ -99,6 +99,9 @@
 #define CAT_ICE	"Frozen"
 #define CAT_DRINK "Drinks"
 
+#define CAT_MEDICAL "Medical"
+#define CAT_WOUNDTREAT "Wound Treatment"
+
 #define RCD_FLOORWALL 1
 #define RCD_AIRLOCK 2
 #define RCD_DECONSTRUCT 3

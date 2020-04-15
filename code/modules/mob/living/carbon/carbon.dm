@@ -57,18 +57,18 @@
 
 /mob/living/carbon/attackby(obj/item/I, mob/user, params)
 	var/be_nice = FALSE
-	if(lying && user.a_intent == INTENT_HELP)
-
-		if(I.sharpness)
-			attempt_initiate_surgery(I, src, user)
-			be_nice = TRUE
-		if(surgeries.len && user != src)
-			for(var/datum/surgery/S in surgeries)
-				if(S.next_step(user))
+	if(I.sharpness && user.a_intent == INTENT_HELP && src.a_intent == INTENT_HELP || I.tool_behaviour == TOOL_SURGERY_START && user.a_intent == INTENT_DISARM)
+		attempt_initiate_surgery(I, src, user)
+		be_nice = TRUE
+	for(var/datum/surgery/S in surgeries)
+		if(!(mobility_flags && MOBILITY_STAND) || !S.lying_required)
+			if((S.self_operable || user != src) && (user.a_intent == INTENT_HELP || user.a_intent == INTENT_DISARM))
+				if(S.next_step(user,user.a_intent))
 					return 1
 	if(be_nice)//so that if we don't stab them after starting a surgery that can't be started with a sharp tool
 		return 1
 	return ..()
+
 
 /mob/living/carbon/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
@@ -815,6 +815,7 @@
 			reagents.addiction_list = list()
 	cure_all_traumas(TRAUMA_RESILIENCE_MAGIC)
 	mend_fractures()
+	heal_wounds()
 	..()
 	// heal ears after healing traits, since ears check TRAIT_DEAF trait
 	// when healing.

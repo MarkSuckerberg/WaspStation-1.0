@@ -2,7 +2,7 @@
 /turf/open/floor/engine
 	name = "reinforced floor"
 	desc = "Extremely sturdy."
-	icon = 'waspstation/icons/turf/floor/tiles.dmi'
+	icon = 'waspstation/icons/turf/floors/tiles.dmi'
 	icon_state = "engine"
 	thermal_conductivity = 0.025
 	heat_capacity = INFINITY

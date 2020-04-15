@@ -22,8 +22,12 @@
 	var/held_index = 0 //are we a hand? if so, which one!
 	var/render_like_organic = FALSE // TRUE is for when you want a BODYPART_ROBOTIC to pretend to be a BODYPART_ORGANIC.
 	var/is_pseudopart = FALSE //For limbs that don't really exist, eg chainsaws
+
 	var/bone_status = BONE_FLAG_NO_BONES // Is it fine, broken, splinted, or just straight up fucking gone
 	var/bone_break_threshold = 30
+
+	var/list/wounds = list()
+	var/wound_threshold = 5
 
 	var/disabled = BODYPART_NOT_DISABLED //If disabled, limb is as good as missing
 	var/body_damage_coeff = 1 //Multiplier of the limb's damage that gets applied to the mob
@@ -149,7 +153,7 @@
 //Applies brute and burn damage to the organ. Returns 1 if the damage-icon states changed at all.
 //Damage will not exceed max_damage using this proc
 //Cannot apply negative damage
-/obj/item/bodypart/proc/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, break_modifier = 1)
+/obj/item/bodypart/proc/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, break_modifier = 1, specialtype = DAMAGE_NONE, woundmod = 1)
 	var/hit_percent = (100-blocked)/100
 	if((!brute && !burn && !stamina) || hit_percent <= 0)
 		return FALSE
@@ -177,6 +181,34 @@
 	// Is the damage greater than the threshold, and if so, probability of damage + item force
 	if((brute_dam > bone_break_threshold) && prob(brute_dam + break_modifier))
 		break_bone()
+
+
+	//Brute wounds
+	if((brute > wound_threshold) && prob(brute * woundmod))
+		switch(specialtype)
+			if(DAMAGE_BRUTE_LACERATE) //Moderate cut
+				if(!haswound("cut"))
+					AddComponent(/datum/component/wound, woundtype = "cut", wound_msg = "A cut is opened on your [src.name]!", pain_chance = 10, heal_chance = 10, initial_pain = 5, irritate_chance = 3, irritate_pain = 2, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute, bleed = 1)
+			if(DAMAGE_BRUTE_PUNCTURE) //Moderate hole
+				if(!haswound("gash"))
+					AddComponent(/datum/component/wound, woundtype = "gash", wound_msg = "A gash opens on your [src.name]!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 2, irritate_pain = 3, max_irritate_pain = 7, damage_type_initial = brute, damage_type = brute, bleed = 3)
+			if(DAMAGE_BRUTE_BLUNTOBJ) //Moderate bruise
+				if(!haswound("bruise"))
+					AddComponent(/datum/component/wound, woundtype = "bruise", wound_msg = "Your [src.name] begins to bruise!", pain_chance = 10, heal_chance = 5, initial_pain = 2, irritate_chance = 1, irritate_pain = 5, max_irritate_pain = 10, damage_type_initial = brute, damage_type = brute)
+
+	//Burn wounds
+	if((burn > wound_threshold) && prob(burn * woundmod))
+		switch(specialtype)
+			if(DAMAGE_BURN_1STDEGREE) //Minor burn
+				if(!haswound("singe"))
+					AddComponent(/datum/component/wound, woundtype = "singe", wound_msg = "You singe your [src.name]!", pain_chance = 0, heal_chance = 5, initial_pain = 5, irritate_chance = 2, irritate_pain = 2, damage_type_initial = burn, damage_type = brute)
+			if(DAMAGE_BURN_2NDDEGREE) //Moderate burns
+				if(!haswound("blister"))
+					AddComponent(/datum/component/wound, woundtype = "blister", wound_msg = "Your [src.name] begins to blister!", pain_chance = 5, heal_chance = 1, initial_pain = 10, irritate_chance = 1, irritate_pain = 3, damage_type_initial = burn, damage_type = brute, bleed = 2)
+			if(DAMAGE_BURN_3RDDEGREE) //Major burn
+				if(!haswound("blackened skin"))
+					AddComponent(/datum/component/wound, woundtype = "blackened skin", wound_msg = "The skin on your [src.name] begins to peel back and turn black!", pain_chance = 10, heal_chance = 1, initial_pain = 2, irritate_chance = 15, irritate_pain = 5, damage_type_initial = stamina, damage_type = brute)
+
 
 	var/can_inflict = max_damage - get_damage()
 	if(can_inflict <= 0)
@@ -757,6 +789,15 @@
 	dismemberable = 0
 	max_damage = 5000
 	animal_origin = DEVIL_BODYPART
+
+// Secondary wounds procs //
+/obj/item/bodypart/proc/haswound(woundtype)
+	for(var/W in wounds)
+		if(!woundtype)
+			return TRUE
+		if(W == woundtype)
+			return TRUE
+	return FALSE
 
 // BROKEN BONE PROCS //
 /obj/item/bodypart/proc/can_break_bone()
