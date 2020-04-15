@@ -12,6 +12,7 @@
 	var/number_of_mats = 1
 	var/build_material = /obj/item/stack/rods
 	canSmoothWith = list(/obj/structure/lattice,
+	/obj/structure/catwalk,
 	/turf/open/floor,
 	/turf/closed/wall,
 	/obj/structure/falsewall)
@@ -67,7 +68,9 @@
 	if(current_size >= STAGE_FOUR)
 		deconstruct()
 
-/obj/structure/lattice/catwalk
+/* WaspStation Edit - Better Catwalks
+
+/obj/structure/catwalk
 	name = "catwalk"
 	desc = "A catwalk for easier EVA maneuvering and cable placement."
 	icon = 'icons/obj/smooth_structures/catwalk.dmi'
@@ -77,20 +80,22 @@
 	canSmoothWith = null
 	obj_flags = CAN_BE_HIT | BLOCK_Z_FALL
 
-/obj/structure/lattice/catwalk/deconstruction_hints(mob/user)
+/obj/structure/catwalk/deconstruction_hints(mob/user)
 	return "<span class='notice'>The supporting rods look like they could be <b>cut</b>.</span>"
 
-/obj/structure/lattice/catwalk/Move()
+/obj/structure/catwalk/Move()
 	var/turf/T = loc
 	for(var/obj/structure/cable/C in T)
 		C.deconstruct()
 	..()
 
-/obj/structure/lattice/catwalk/deconstruct()
+/obj/structure/catwalk/deconstruct()
 	var/turf/T = loc
 	for(var/obj/structure/cable/C in T)
 		C.deconstruct()
 	..()
+
+WaspStation End */
 
 /obj/structure/lattice/lava
 	name = "heatproof support lattice"

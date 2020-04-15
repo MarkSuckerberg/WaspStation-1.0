@@ -319,6 +319,7 @@
 	mineralType = "metal"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 70)
 	resistance_flags = FIRE_PROOF
+	color = COLOR_FLOORTILE_GRAY
 
 /obj/item/stack/tile/plasteel/cyborg
 	desc = "The ground you walk on." //Not the usual floor tile desc as that refers to throwing, Cyborgs can't do that - RR
@@ -351,3 +352,11 @@
 
 /obj/item/stack/tile/eighties/loaded
 	amount = 15
+	
+/obj/item/stack/tile/plasteel/dark
+	turf_type = /turf/open/floor/plasteel/dark
+	color = COLOR_TILE_GRAY
+
+/obj/item/stack/tile/plasteel/white
+	turf_type = /turf/open/floor/plasteel/white
+	color = COLOR_WHITE

@@ -42,8 +42,6 @@
 
 	underlays.Cut()
 
-	plane = showpipe ? GAME_PLANE : FLOOR_PLANE
-
 	if(!showpipe)
 		return
 
