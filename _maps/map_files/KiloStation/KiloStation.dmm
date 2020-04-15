@@ -1933,7 +1933,7 @@
 	id = "prisonblast";
 	name = "Prison Blast Door"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "adm" = (
@@ -2033,7 +2033,7 @@
 	id = "xeno_blastdoor";
 	name = "Xenobiology Containment Blast Door"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
 "adt" = (
@@ -2425,7 +2425,7 @@
 	pixel_y = 24;
 	req_one_access_txt = "2"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
 "adW" = (
@@ -2888,7 +2888,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/medical/cryo)
 "aeQ" = (
@@ -3928,7 +3928,7 @@
 	pixel_x = -26
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
 "agA" = (
@@ -3941,7 +3941,7 @@
 /area/maintenance/fore)
 "agB" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
@@ -4513,7 +4513,7 @@
 	id = "transittube";
 	name = "Transit Tube Blast door"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/dark,
@@ -5943,7 +5943,7 @@
 	name = "Emergency Research Blast Door"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/science/research)
 "ajM" = (
@@ -6131,7 +6131,7 @@
 	id = "transittube";
 	name = "Transit Tube Blast door"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -6486,7 +6486,7 @@
 "akF" = (
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/medical/surgery)
 "akG" = (
@@ -6847,7 +6847,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -6858,7 +6858,7 @@
 	pixel_x = 28
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
 "all" = (
@@ -7842,7 +7842,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
@@ -8174,7 +8174,7 @@
 /area/security/processing)
 "ani" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
 "anj" = (
@@ -8224,7 +8224,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
 "ann" = (
@@ -10965,7 +10965,7 @@
 /obj/structure/sign/warning/electricshock{
 	pixel_x = -32
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/engine,
 /area/science/xenobiology)
@@ -13700,7 +13700,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
 "avK" = (
@@ -15156,7 +15156,7 @@
 	name = "Containment Chamber Blast Door"
 	},
 /obj/machinery/atmospherics/pipe/simple/general/hidden,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/engine,
 /area/science/xenobiology)
@@ -15318,7 +15318,7 @@
 /area/maintenance/department/electrical)
 "ayi" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "ayj" = (
@@ -15639,7 +15639,7 @@
 /obj/structure/sign/warning/biohazard{
 	pixel_x = 32
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/engine,
 /area/science/xenobiology)
@@ -15878,7 +15878,7 @@
 /obj/structure/sign/departments/evac{
 	pixel_y = 32
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/starboard)
 "azc" = (
@@ -17229,7 +17229,7 @@
 /area/engine/engineering)
 "aBg" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "aBh" = (
@@ -19740,7 +19740,7 @@
 /area/maintenance/fore)
 "aFl" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/medical/cryo)
 "aFm" = (
@@ -20620,7 +20620,7 @@
 /area/engine/atmos)
 "aGG" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aGH" = (
@@ -21433,7 +21433,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "aHV" = (
@@ -23089,7 +23089,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/security/processing)
@@ -23537,7 +23537,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/fore)
@@ -23854,7 +23854,7 @@
 	id = "bridge blast";
 	name = "Bridge Blast door"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -23949,7 +23949,7 @@
 	id = "telelab";
 	name = "Test Chamber Blast Door"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/engine,
 /area/science/explab)
 "aLP" = (
@@ -25883,7 +25883,7 @@
 /area/medical/genetics)
 "aOF" = (
 /obj/machinery/door/firedoor/heavy,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/science/mixing/chamber)
@@ -26364,7 +26364,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 9
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/science/mixing/chamber)
 "aPn" = (
@@ -28292,7 +28292,7 @@
 /area/medical/chemistry)
 "aRV" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/fore)
@@ -28329,7 +28329,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/fore)
 "aRZ" = (
@@ -30735,7 +30735,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
@@ -31823,7 +31823,7 @@
 "aWQ" = (
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/blood/old,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
 "aWR" = (
@@ -32032,7 +32032,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
 "aXi" = (
@@ -32987,7 +32987,7 @@
 	id = "emmd";
 	name = "Emergency Medical Lockdown Shutters"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
@@ -33887,7 +33887,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/fore)
 "aZP" = (
@@ -36179,7 +36179,7 @@
 /area/science/explab)
 "bdf" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/fore)
 "bdg" = (
@@ -36310,7 +36310,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/medical/surgery)
@@ -36776,7 +36776,7 @@
 	pixel_x = 32;
 	pixel_y = -8
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/fore)
 "bdV" = (
@@ -37207,7 +37207,7 @@
 	pixel_x = -32;
 	pixel_y = -8
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/fore)
 "bev" = (
@@ -37340,7 +37340,7 @@
 "beF" = (
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/central)
 "beG" = (
@@ -38172,7 +38172,7 @@
 	dir = 4;
 	pixel_x = -26
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/port)
 "bfT" = (
@@ -41794,7 +41794,7 @@
 	id = "teleshutter";
 	name = "Teleporter Access Shutter"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/teleporter)
 "bkX" = (
@@ -42351,7 +42351,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/effect/floor_decal/corner/neutral,
 /obj/effect/floor_decal/corner/neutral{
 	dir = 4
@@ -43081,7 +43081,7 @@
 	id = "evashutter";
 	name = "E.V.A. Storage Shutter"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/storage/eva)
 "bmQ" = (
@@ -45245,7 +45245,7 @@
 	name = "Bridge Blast door"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -45276,7 +45276,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 28
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
@@ -46373,7 +46373,7 @@
 	dir = 4;
 	pixel_x = -26
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/starboard)
 "brA" = (
@@ -49110,7 +49110,7 @@
 /area/library)
 "bvB" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/starboard)
 "bvC" = (
@@ -49212,7 +49212,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
 "bvK" = (
@@ -50918,7 +50918,7 @@
 	id = "brigfrontdoor";
 	name = "Front Security Blast door"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
@@ -50937,7 +50937,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/fore)
@@ -51325,7 +51325,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/corner/neutral,
 /obj/effect/floor_decal/corner/neutral{
@@ -52703,7 +52703,7 @@
 /area/engine/atmos)
 "bBj" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
 "bBk" = (
@@ -53072,7 +53072,7 @@
 "bBJ" = (
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/port)
@@ -53205,7 +53205,7 @@
 	pixel_x = 32;
 	pixel_y = -8
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/port)
@@ -55277,7 +55277,7 @@
 "bEY" = (
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/starboard)
@@ -56148,7 +56148,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/bridge)
@@ -58718,7 +58718,7 @@
 	name = "Chief Engineer's Privacy Shutters"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "bKr" = (
@@ -60996,7 +60996,7 @@
 /area/hallway/primary/starboard)
 "bNC" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -61296,7 +61296,7 @@
 "bNW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "captain_escape";
 	name = "Tactical Relocation Shutter"
@@ -64042,7 +64042,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
 	},
@@ -65813,7 +65813,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
 	},
@@ -65909,7 +65909,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 1
 	},
@@ -67871,7 +67871,7 @@
 /area/engine/break_room)
 "bXJ" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/aft)
@@ -68191,7 +68191,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
@@ -68446,7 +68446,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
 	},
@@ -68743,7 +68743,7 @@
 /area/hallway/primary/starboard)
 "bYW" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
@@ -68879,7 +68879,7 @@
 	id = "bridge blast";
 	name = "Bridge Blast door"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
@@ -68963,7 +68963,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
 "bZp" = (
@@ -69339,7 +69339,7 @@
 /area/hallway/primary/starboard)
 "bZO" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/starboard)
@@ -69921,7 +69921,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/aft)
 "caE" = (
@@ -70465,7 +70465,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -72528,7 +72528,7 @@
 /area/maintenance/port/aft)
 "ceS" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/aft)
@@ -73096,7 +73096,7 @@
 	pixel_y = -24;
 	req_one_access_txt = "2"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
@@ -73272,7 +73272,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/security/warden)
@@ -74971,7 +74971,7 @@
 	name = "Engine Access Shutters"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
@@ -77221,7 +77221,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
 "cmt" = (
@@ -77235,7 +77235,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
@@ -77491,7 +77491,7 @@
 	},
 /obj/machinery/light/small,
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
 "cmR" = (
@@ -77719,7 +77719,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
@@ -78125,7 +78125,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
@@ -82285,7 +82285,7 @@
 	id = "xeno_blastdoor";
 	name = "Xenobiology Containment Blast Door"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/disposalpipe/junction{
 	dir = 4
 	},
@@ -83202,7 +83202,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 24
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
@@ -86639,7 +86639,7 @@
 	id = "engsm";
 	name = "Radiation Chamber Shutters"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/engine/supermatter)
@@ -86821,7 +86821,7 @@
 	id = "engsm";
 	name = "Radiation Chamber Shutters"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/supermatter)
 "cCm" = (
@@ -87399,7 +87399,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
@@ -88734,7 +88734,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/aft)
 "cFC" = (
@@ -88742,7 +88742,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/aft)
 "cFD" = (

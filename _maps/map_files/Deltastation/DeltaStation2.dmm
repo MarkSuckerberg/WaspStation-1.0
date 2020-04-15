@@ -12602,7 +12602,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "aDh" = (
@@ -29338,7 +29338,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel,
 /area/quartermaster/miningoffice)
 "bgT" = (
@@ -37072,7 +37072,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel,
 /area/security/execution/transfer)
 "buB" = (
@@ -112877,7 +112877,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/escape)
 "eeU" = (
@@ -113565,7 +113565,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "ehG" = (
@@ -113624,7 +113624,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "ehP" = (

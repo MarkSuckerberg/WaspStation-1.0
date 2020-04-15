@@ -3203,7 +3203,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "ahH" = (

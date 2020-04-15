@@ -25495,7 +25495,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "bfV" = (
@@ -29870,7 +29870,7 @@
 	name = "Transit Tube Blast Door"
 	},
 /obj/structure/cable,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "bpn" = (
@@ -33202,7 +33202,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "bxg" = (
@@ -33779,7 +33779,7 @@
 	id = "Engineering";
 	name = "Engineering Security Doors"
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "byL" = (
@@ -69650,7 +69650,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/engine/break_room)
 "dqp" = (

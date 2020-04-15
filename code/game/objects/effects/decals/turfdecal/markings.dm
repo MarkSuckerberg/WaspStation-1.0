@@ -119,13 +119,13 @@
 /obj/effect/turf_decal/caution/red
 	color = COLOR_RED
 
-/obj/effect/turf_decal/caution/stand_clear
+/obj/effect/floor_decal/industrial/stand_clear
 	icon_state = "stand_clear"
 
-/obj/effect/turf_decal/caution/stand_clear/white
+/obj/effect/floor_decal/industrial/stand_clear/white
 	color = COLOR_WHITE
 
-/obj/effect/turf_decal/caution/stand_clear/red
+/obj/effect/floor_decal/industrial/stand_clear/red
 	color = COLOR_RED
 
 /obj/effect/turf_decal/arrows

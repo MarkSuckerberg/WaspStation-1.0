@@ -14449,7 +14449,7 @@
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 8
 	},
 /turf/open/floor/engine/hull,
@@ -14458,7 +14458,7 @@
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 4
 	},
 /turf/open/floor/engine/hull,
@@ -14485,7 +14485,7 @@
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/engine/hull,
 /area/space/nearstation)
 "DS" = (

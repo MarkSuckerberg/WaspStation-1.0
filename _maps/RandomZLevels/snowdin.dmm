@@ -8075,7 +8075,7 @@
 "sK" = (
 /obj/effect/turf_decal/weather/snow,
 /obj/effect/turf_decal/stripes/white/line,
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark/snowdin,
@@ -8206,7 +8206,7 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark/snowdin,
@@ -8219,7 +8219,7 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark/snowdin,
@@ -9408,7 +9408,7 @@
 /area/awaymission/snowdin/cave)
 "xb" = (
 /obj/effect/turf_decal/stripes/white/line,
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 1
 	},
 /obj/machinery/light/small{
@@ -9596,7 +9596,7 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 8
 	},
 /turf/open/floor/plating/snowed,
@@ -9605,7 +9605,7 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 4
 	},
 /turf/open/floor/plating/snowed,
@@ -9925,7 +9925,7 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plating/snowed,
 /area/awaymission/snowdin/cave)
 "yr" = (
@@ -10048,7 +10048,7 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark/snowdin,
 /area/awaymission/snowdin/outside)
 "yH" = (
@@ -14064,7 +14064,7 @@
 /area/awaymission/snowdin/post/mining_main)
 "Jy" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown,
@@ -14160,7 +14160,7 @@
 /area/awaymission/snowdin/post/mining_dock)
 "JI" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown,
@@ -14368,7 +14368,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/brown{
@@ -14399,7 +14399,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/brown{
@@ -14432,7 +14432,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -14455,7 +14455,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/effect/turf_decal/caution/stand_clear{
+/obj/effect/floor_decal/industrial/stand_clear{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/brown{
@@ -14637,7 +14637,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/effect/floor_decal/corner/brown{
 	dir = 1
 	},
@@ -14675,7 +14675,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/floor_decal/industrial/stand_clear,
 /obj/effect/floor_decal/corner/brown{
 	dir = 1
 	},
