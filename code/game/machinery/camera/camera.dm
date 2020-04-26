@@ -60,11 +60,11 @@
 
 	var/turf/T = get_step(get_turf(src), turn(src.dir, 180))
 	if(istype(T, /turf/closed/wall))
-		if(src.dir == NORTH)
+		if(dir == SOUTH)
 			pixel_y = 21
-		else if(src.dir == EAST)
+		else if(dir == WEST)
 			pixel_x = 10
-		else if(src.dir == WEST)
+		else if(dir == EAST)
 			pixel_x = -10
 
 	for(var/i in network)
