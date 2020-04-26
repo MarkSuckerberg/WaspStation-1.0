@@ -46,6 +46,7 @@
 #define DEFAULT_UNDERLAY_ICON_STATE 	"plating"
 
 /atom/var/smooth = SMOOTH_FALSE
+/atom/var/legacy_smooth = FALSE //Waspstation - Goon walls (from NSV13)
 /atom/var/top_left_corner
 /atom/var/top_right_corner
 /atom/var/bottom_left_corner
@@ -118,6 +119,9 @@
 	if(QDELETED(A))
 		return
 	if(A.smooth & (SMOOTH_TRUE | SMOOTH_MORE))
+		if(A.legacy_smooth) //Waspstation - Adds support for goon style walls (port from NSV13)
+			A.legacy_smooth()
+			return
 		var/adjacencies = calculate_adjacencies(A)
 
 		if(A.smooth & SMOOTH_DIAGONAL)

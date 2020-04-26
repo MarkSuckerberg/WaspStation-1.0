@@ -1,8 +1,7 @@
 /turf/closed/wall/r_wall
 	name = "reinforced wall"
 	desc = "A huge chunk of reinforced metal used to separate rooms."
-	icon = 'icons/turf/walls/reinforced_wall.dmi'
-	icon_state = "r_wall"
+	mod = "R"
 	opacity = 1
 	density = TRUE
 
