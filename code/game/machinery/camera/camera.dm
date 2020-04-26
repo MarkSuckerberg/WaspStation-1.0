@@ -55,6 +55,18 @@
 
 /obj/machinery/camera/Initialize(mapload, obj/structure/camera_assembly/CA)
 	. = ..()
+	pixel_x = 0
+	pixel_y = 0
+
+	var/turf/T = get_step(get_turf(src), turn(src.dir, 180))
+	if(istype(T, /turf/closed/wall))
+		if(src.dir == NORTH)
+			pixel_y = 21
+		else if(src.dir == EAST)
+			pixel_x = 10
+		else if(src.dir == WEST)
+			pixel_x = -10
+
 	for(var/i in network)
 		network -= i
 		network += lowertext(i)

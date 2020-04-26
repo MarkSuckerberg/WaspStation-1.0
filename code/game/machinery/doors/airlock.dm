@@ -110,6 +110,15 @@
 	var/hatch_close_sound = 'sound/machines/hatch_close.ogg'
 	var/image/hatch_image
 
+	//Airlock 2.0 Aesthetics Properties
+	//The variables below determine what color the airlock and decorative stripes will be -Cakey
+	//Slightly modified for updated TGcode. -MarkSuckerberg
+	var/symbol = null
+
+	var/door_color = null
+	var/stripe_color = null
+	var/symbol_color = null
+
 /obj/machinery/door/airlock/Initialize()
 	. = ..()
 	wires = new /datum/wires/airlock(src)
@@ -531,6 +540,8 @@
 	var/mutable_appearance/note_overlay
 	var/notetype = note_type()
 	var/mutable_appearance/hatch_overlay
+	var/mutable_appearance/stripe_overlay
+	var/mutable_appearance/stripe_filling_overlay
 
 	switch(state)
 		if(AIRLOCK_CLOSED)
@@ -563,6 +574,13 @@
 				else
 					hatch_image.icon_state = "hatch_closed"
 				hatch_overlay = hatch_image
+			if(stripe_color)
+				stripe_overlay = get_airlock_overlay("stripe_closed", icon)
+				stripe_overlay.color = stripe_color
+				if(!glass)
+					stripe_filling_overlay = get_airlock_overlay("stripe_fill_closed", icon)
+					stripe_filling_overlay.color = stripe_color
+
 
 		if(AIRLOCK_DENY)
 			if(!hasPower())
@@ -592,6 +610,12 @@
 				else
 					hatch_image.icon_state = "hatch_closed"
 				hatch_overlay = hatch_image
+			if(stripe_color)
+				stripe_overlay = get_airlock_overlay("stripe_closed", overlays_file)
+				stripe_overlay.color = stripe_color
+				if(!glass)
+					stripe_filling_overlay = get_airlock_overlay("stripe_fill_closed", overlays_file)
+					stripe_filling_overlay.color = stripe_color
 
 		if(AIRLOCK_EMAG)
 			frame_overlay = get_airlock_overlay("closed", icon)
@@ -613,6 +637,12 @@
 				weld_overlay = get_airlock_overlay("welded", overlays_file)
 			if(note)
 				note_overlay = get_airlock_overlay(notetype, note_overlay_file)
+			if(stripe_color)
+				stripe_overlay = get_airlock_overlay("stripe_closed", overlays_file)
+				stripe_overlay.color = stripe_color
+				if(!glass)
+					stripe_filling_overlay = get_airlock_overlay("stripe_fill_closed", overlays_file)
+					stripe_filling_overlay.color = stripe_color
 
 		if(AIRLOCK_CLOSING)
 			frame_overlay = get_airlock_overlay("closing", icon)
@@ -631,6 +661,12 @@
 				note_overlay = get_airlock_overlay("[notetype]_closing", note_overlay_file)
 			if(has_hatch)
 				hatch_overlay = get_airlock_overlay("hatch_closing", overlays_file)
+			if(stripe_color)
+				stripe_overlay = get_airlock_overlay("stripe_closing", overlays_file)
+				stripe_overlay.color = stripe_color
+				if(!glass)
+					stripe_filling_overlay = get_airlock_overlay("stripe_fill_closing", overlays_file)
+					stripe_filling_overlay.color = stripe_color
 
 		if(AIRLOCK_OPEN)
 			frame_overlay = get_airlock_overlay("open", icon)
@@ -647,6 +683,12 @@
 				damag_overlay = get_airlock_overlay("sparks_open", overlays_file)
 			if(note)
 				note_overlay = get_airlock_overlay("[notetype]_open", note_overlay_file)
+			if(stripe_color)
+				stripe_overlay = get_airlock_overlay("stripe_open", overlays_file)
+				stripe_overlay.color = stripe_color
+				if(!glass)
+					stripe_filling_overlay = get_airlock_overlay("stripe_fill_open", overlays_file)
+					stripe_filling_overlay.color = stripe_color
 
 		if(AIRLOCK_OPENING)
 			frame_overlay = get_airlock_overlay("opening", icon)
@@ -665,6 +707,15 @@
 				note_overlay = get_airlock_overlay("[notetype]_opening", note_overlay_file)
 			if(has_hatch)
 				hatch_overlay = get_airlock_overlay("hatch_opening", overlays_file)
+			if(stripe_color)
+				stripe_overlay = get_airlock_overlay("stripe_opening", overlays_file)
+				stripe_overlay.color = stripe_color
+				if(!glass)
+					stripe_filling_overlay = get_airlock_overlay("stripe_fill_opening", overlays_file)
+					stripe_filling_overlay.color = stripe_color
+
+	if(door_color)
+		frame_overlay.color = door_color
 
 	cut_overlays()
 	add_overlay(frame_overlay)
