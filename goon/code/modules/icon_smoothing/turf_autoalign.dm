@@ -19,6 +19,7 @@
 	// ty to somepotato for assistance with making this proc actually work right :I
 
 /atom/proc/legacy_smooth() //overwrite the smoothing to use icon smooth SS
+	cut_overlays()
 	var/builtdir = 0
 	for (var/dir in GLOB.cardinals)
 		var/turf/T = get_step(src, dir)
@@ -36,3 +37,10 @@
 					break
 
 	src.icon_state = "[builtdir][src.smoothing_d_state ? "C" : null]"
+
+	if(src.icon_state == "2" || src.icon_state == "0") //3/4ths perspective wall caps
+		var/mutable_appearance/smooth_top_overlay = mutable_appearance(src.icon, "16[src.smoothing_d_state ? "C" : null]", ABOVE_ALL_MOB_LAYER)
+		if(smooth_top_overlay)
+			src.icon_state = "[builtdir + 1][src.smoothing_d_state ? "C" : null]" //If 2 then 3, if 0 then 1
+			smooth_top_overlay.pixel_y = 32
+			add_overlay(smooth_top_overlay)

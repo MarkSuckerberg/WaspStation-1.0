@@ -12,7 +12,7 @@
 	baseturfs = /turf/open/floor/plating
 
 	legacy_smooth = TRUE
-	var/mod = null ///An iconstate modifier, such as R then the numbers, so R10 for a directional.
+	var/door_overlay = "wall"
 	var/connect_universally = TRUE ///Should this wall connect to every subtype of itself? Wasp edit (port from NSV)
 
 	///lower numbers are harder. Used to determine the probability of a hulk smashing through. Also, (hardness - 40) is used as a modifier for objects trying to embed in this (hardness of 30 results in a -10% chance)

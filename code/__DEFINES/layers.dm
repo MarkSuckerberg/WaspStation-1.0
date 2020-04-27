@@ -71,6 +71,8 @@
 #define SPACEPOD_LAYER 3.9 // Wasp - Spess pods
 //#define MOB_LAYER 4 //For easy recordkeeping; this is a byond define
 #define ABOVE_MOB_LAYER 4.1
+//#define OPEN_DOOR_LAYER 4.2
+//#define DOOR_HELPER_LAYER 4.21 //keep this above OPEN_DOOR_LAYER
 #define WALL_OBJ_LAYER 4.25
 #define EDGED_TURF_LAYER 4.3
 #define ON_EDGED_TURF_LAYER 4.35

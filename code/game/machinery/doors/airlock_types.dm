@@ -3,72 +3,70 @@
 */
 
 /obj/machinery/door/airlock/command
-	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_com
 	normal_integrity = 450
-	hatch_colour = "#446892"
+	door_color = "#446892"
+	stripe_color = "#3e90ca"
 
 /obj/machinery/door/airlock/security
-	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_sec
 	normal_integrity = 450
-	hatch_colour = "#c82b2b"
+	door_color = "#c82b2b"
+	stripe_color = "#F57211"
 
 /obj/machinery/door/airlock/engineering
-	icon = 'icons/obj/doors/airlocks/station/engineering.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_eng
-	hatch_colour = "#caa638"
+	door_color = "#caa638"
+	stripe_color = "#85292F"
 
 /obj/machinery/door/airlock/medical
-	icon = 'icons/obj/doors/airlocks/station/medical.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_med
-	hatch_colour = "#d2d2d2"
+	door_color = "#d2d2d2"
+	stripe_color = "#7CB8DD"
 
 /obj/machinery/door/airlock/maintenance
 	name = "maintenance access"
-	icon = 'icons/obj/doors/airlocks/station/maintenance.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_mai
 	normal_integrity = 250
-	hatch_colour = "#7d7d7d"
+	door_color = "#7d7d7d"
+	stripe_color = "#C5A931"
 
 /obj/machinery/door/airlock/maintenance/external
 	name = "external airlock access"
-	icon = 'icons/obj/doors/airlocks/station/maintenanceexternal.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_extmai
 	has_hatch = FALSE
 
 /obj/machinery/door/airlock/mining
 	name = "mining airlock"
-	icon = 'icons/obj/doors/airlocks/station/mining.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_min
-	hatch_colour = "#c29142"
+	door_color = "#c29142"
+	stripe_color = "#78430D"
 
 /obj/machinery/door/airlock/atmos
 	name = "atmospherics airlock"
-	icon = 'icons/obj/doors/airlocks/station/atmos.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_atmo
-	hatch_colour = "#caa638"
+	door_color = "#caa638"
+	stripe_color = "#469085"
 
 /obj/machinery/door/airlock/research
-	icon = 'icons/obj/doors/airlocks/station/research.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_research
-	hatch_colour = "#d2d2d2"
+	door_color = "#d2d2d2"
+	stripe_color = "#76417B"
 
 /obj/machinery/door/airlock/freezer
 	name = "freezer airlock"
-	icon = 'icons/obj/doors/airlocks/station/freezer.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_fre
-	hatch_colour = "#ffffff"
+	door_color = "#ffffff"
 
 /obj/machinery/door/airlock/science
-	icon = 'icons/obj/doors/airlocks/station/science.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_science
-	hatch_colour = "#d2d2d2"
+	door_color = "#d2d2d2"
+	stripe_color = "#6666CC"
 
 /obj/machinery/door/airlock/virology
-	icon = 'icons/obj/doors/airlocks/station/virology.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_viro
-	hatch_colour = "#d2d2d2"
+	door_color = "#d2d2d2"
+	stripe_color = "#467B41"
 
 //////////////////////////////////
 /*
@@ -98,12 +96,10 @@
 	opacity = 0
 	glass = TRUE
 	normal_integrity = 400
-	hatch_colour = "#345882"
 
 /obj/machinery/door/airlock/engineering/glass
 	opacity = 0
 	glass = TRUE
-	hatch_colour = "#caa638"
 
 /obj/machinery/door/airlock/engineering/glass/critical
 	critical_machine = TRUE //stops greytide virus from opening & bolting doors in critical positions, such as the SM chamber.
@@ -112,17 +108,14 @@
 	opacity = 0
 	glass = TRUE
 	normal_integrity = 400
-	hatch_colour = "#b81b1b"
 
 /obj/machinery/door/airlock/medical/glass
 	opacity = 0
 	glass = TRUE
-	hatch_colour = "#d2d2d2"
 
 /obj/machinery/door/airlock/research/glass
 	opacity = 0
 	glass = TRUE
-	hatch_colour = "#d2d2d2"
 
 /obj/machinery/door/airlock/research/glass/incinerator
 	autoclose = FALSE
@@ -142,12 +135,10 @@
 /obj/machinery/door/airlock/mining/glass
 	opacity = 0
 	glass = TRUE
-	hatch_colour = "#c29142"
 
 /obj/machinery/door/airlock/atmos/glass
 	opacity = 0
 	glass = TRUE
-	hatch_colour = "#caa638"
 
 /obj/machinery/door/airlock/atmos/glass/critical
 	critical_machine = TRUE //stops greytide virus from opening & bolting doors in critical positions, such as the SM chamber.
@@ -155,17 +146,14 @@
 /obj/machinery/door/airlock/science/glass
 	opacity = 0
 	glass = TRUE
-	hatch_colour = "#d2d2d2"
 
 /obj/machinery/door/airlock/virology/glass
 	opacity = 0
 	glass = TRUE
-	hatch_colour = "#d2d2d2"
 
 /obj/machinery/door/airlock/maintenance/glass
 	opacity = 0
 	glass = TRUE
-	hatch_colour = "#7d7d7d"
 
 /obj/machinery/door/airlock/maintenance/external/glass
 	opacity = 0
@@ -339,7 +327,7 @@
 	icon = 'icons/obj/doors/airlocks/station2/glass.dmi'
 	overlays_file = 'icons/obj/doors/airlocks/station2/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_public
-	hatch_colour = "#eaeaea"
+	door_color = "#eaeaea"
 
 /obj/machinery/door/airlock/public/glass
 	opacity = 0
