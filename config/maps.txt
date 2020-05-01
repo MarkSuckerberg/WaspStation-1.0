@@ -48,4 +48,10 @@ map runtimestation
 endmap
 
 map multiz_debug
+
+map babylon
+	default
+	votable
+endmap
+
 endmap
