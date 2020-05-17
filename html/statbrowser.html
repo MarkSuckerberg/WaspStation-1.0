@@ -856,6 +856,16 @@ function draw_sdql2(){
 
 function draw_tickets() {
 	statcontentdiv[textContentKey] = "";
+	var body = document.createElement("div");
+	var manDiv = document.createElement("div");
+	manDiv.className = "ticket_panel_controls"
+	var manLink = document.createElement("a");
+	manLink[textContentKey] = "Open Ticket Browser";
+	manLink.href = "?_src_=holder;admin_token=" + href_token + ";ahelp_tickets=1;statpanel_item_click=1";
+	manDiv.appendChild(manLink);
+	body.appendChild(manDiv);
+	document.getElementById("statcontent").appendChild(body);
+
 	var table = document.createElement("table");
 	if(!tickets)
 		return;

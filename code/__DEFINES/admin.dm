@@ -82,9 +82,10 @@
 #define ADMIN_PUNISHMENT_IMMERSE "Fully Immerse"
 #define ADMIN_PUNISHMENT_NYA "Neko"//WaspStation Edit - Admin Punishment: Cat Tongue
 
-#define AHELP_ACTIVE 1
-#define AHELP_CLOSED 2
-#define AHELP_RESOLVED 3
+#define AHELP_UNCLAIMED 1
+#define AHELP_ACTIVE 2
+#define AHELP_CLOSED 3
+#define AHELP_RESOLVED 4
 
 /// Amount of time (in deciseconds) after the rounds starts, that the player disconnect report is issued.
 #define ROUNDSTART_LOGOUT_REPORT_TIME	6000
