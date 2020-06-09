@@ -31,6 +31,9 @@
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		restricted_jobs += "Assistant"
 
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		restricted_jobs += list("Chief Engineer", "Chief Medical Officer", "Research Director")
+
 	var/list/datum/mind/possible_changelings = get_players_for_role(ROLE_CHANGELING)
 
 	var/num_changelings = 1

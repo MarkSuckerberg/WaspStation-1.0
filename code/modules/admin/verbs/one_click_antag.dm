@@ -52,6 +52,9 @@
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		temp.restricted_jobs += "Assistant"
 
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		temp.restricted_jobs += list("Chief Engineer", "Chief Medical Officer", "Research Director")
+
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
 
@@ -84,6 +87,9 @@
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		temp.restricted_jobs += "Assistant"
 
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		temp.restricted_jobs += list("Chief Engineer", "Chief Medical Officer", "Research Director")
+
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
 
@@ -113,6 +119,9 @@
 
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		temp.restricted_jobs += "Assistant"
+
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		temp.restricted_jobs += list("Chief Engineer", "Chief Medical Officer", "Research Director")
 
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null
@@ -152,6 +161,9 @@
 
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		temp.restricted_jobs += "Assistant"
+
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		temp.restricted_jobs += list("Chief Engineer", "Chief Medical Officer", "Research Director")
 
 	var/list/mob/living/carbon/human/candidates = list()
 	var/mob/living/carbon/human/H = null

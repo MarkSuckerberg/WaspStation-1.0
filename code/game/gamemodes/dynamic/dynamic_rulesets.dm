@@ -86,6 +86,8 @@
 		restricted_roles += protected_roles
 	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
 		restricted_roles += "Assistant"
+	if(CONFIG_GET(flag/protect_heads_from_antagonist))
+		restricted_jobs += list("Chief Engineer", "Chief Medical Officer", "Research Director")
 
 	if (istype(SSticker.mode, /datum/game_mode/dynamic))
 		mode = SSticker.mode
