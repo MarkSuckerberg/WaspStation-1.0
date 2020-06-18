@@ -3,7 +3,8 @@
 /turf/closed/wall
 	name = "wall"
 	desc = "A huge chunk of metal used to separate rooms."
-	icon = 'goon/icons/turf/walls_supernorn.dmi'
+	icon = 'icons/turf/walls/wall.dmi'
+	icon_state = "wall"
 	explosion_block = 1
 
 	thermal_conductivity = WALL_HEAT_TRANSFER_COEFFICIENT
@@ -11,9 +12,7 @@
 
 	baseturfs = /turf/open/floor/plating
 
-	legacy_smooth = TRUE
-	var/door_overlay = "wall"
-	var/connect_universally = TRUE ///Should this wall connect to every subtype of itself? Wasp edit (port from NSV)
+	//WaspStation End
 
 	///lower numbers are harder. Used to determine the probability of a hulk smashing through. Also, (hardness - 40) is used as a modifier for objects trying to embed in this (hardness of 30 results in a -10% chance)
 	var/hardness = 40

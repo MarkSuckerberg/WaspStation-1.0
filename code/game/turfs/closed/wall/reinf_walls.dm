@@ -1,8 +1,7 @@
 /turf/closed/wall/r_wall
 	name = "reinforced wall"
 	desc = "A huge chunk of reinforced metal used to separate rooms."
-	door_overlay = "rwall"
-	icon = 'goon/icons/turf/reinforced.dmi'
+	icon = 'icons/turf/walls/reinforced_wall.dmi'
 	opacity = 1
 	density = TRUE
 

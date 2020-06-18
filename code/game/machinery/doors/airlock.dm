@@ -155,7 +155,6 @@
 
 /obj/machinery/door/airlock/LateInitialize()
 	. = ..()
-	adjust_direction()
 	if(cyclelinkedx || cyclelinkedy)	//Wasp start
 		cyclelinkairlock_target()
 	else
@@ -213,20 +212,6 @@
 		if(A.closeOtherId == closeOtherId && A != src)
 			closeOther = A
 			break
-
-/obj/machinery/door/airlock/proc/adjust_direction()
-	for (var/direction in GLOB.cardinals)
-		var/turf/T = get_step(src, dir)
-		if(istype(T, /turf/closed/wall))
-			var/turf/closed/wall/W = T
-			wall_border = W.door_overlay
-		for(var/atom/A in T)
-			if(is_type_in_list(A, can_connect_to))
-				switch(direction)
-					if(NORTH || SOUTH)
-						dir = WEST
-					if(WEST || EAST)
-						dir = NORTH
 
 /obj/machinery/door/airlock/proc/cyclelinkairlock_target()		//wasp start
 	if (cyclelinkedairlock)
