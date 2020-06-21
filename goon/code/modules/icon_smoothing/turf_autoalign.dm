@@ -21,10 +21,16 @@
 /atom/proc/legacy_smooth() //overwrite the smoothing to use icon smooth SS
 	cut_overlays()
 	var/builtdir = 0
+	var/mutable_appearance/underlay_appearance = mutable_appearance(layer = TURF_LAYER, plane = FLOOR_PLANE)
 	for (var/dir in GLOB.cardinals)
 		var/turf/T = get_step(src, dir)
 		if (T.type == src.type || (T.type in canSmoothWith))
 			builtdir |= dir
+			var/turned_dir = turn(dir, 180)
+			var/turf/G = get_step(src, turned_dir)
+			if(!G.get_smooth_underlay_icon(underlay_appearance, src, turned_dir) && !T.get_smooth_underlay_icon(underlay_appearance, src, turned_dir))
+				underlay_appearance.icon = DEFAULT_UNDERLAY_ICON
+				underlay_appearance.icon_state = DEFAULT_UNDERLAY_ICON_STATE
 		else if (canSmoothWith)
 			for (var/i=1, i <= canSmoothWith.len, i++)
 				var/atom/A = locate(canSmoothWith[i]) in T
@@ -35,6 +41,7 @@
 							continue
 					builtdir |= dir
 					break
+	add_overlay(underlay_appearance)
 
 	src.icon_state = "[builtdir][src.smoothing_d_state ? "C" : null]"
 

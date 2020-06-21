@@ -445,6 +445,7 @@
 /turf/proc/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	underlay_appearance.icon = icon
 	underlay_appearance.icon_state = icon_state
+	underlay_appearance.color = color
 	underlay_appearance.dir = adjacency_dir
 	return TRUE
 
