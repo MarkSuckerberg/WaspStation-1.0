@@ -18,6 +18,7 @@ export { NumberInput } from './NumberInput';
 export { ProgressBar } from './ProgressBar';
 export { Section } from './Section';
 export { Table } from './Table';
+export { TextArea } from './TextArea';
 export { Tabs } from './Tabs';
 export { TitleBar } from './TitleBar';
 export { Tooltip } from './Tooltip';
