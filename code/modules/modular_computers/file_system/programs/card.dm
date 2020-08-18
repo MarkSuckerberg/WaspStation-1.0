@@ -214,6 +214,7 @@
 						to_chat(user, "<span class='warning'>No class exists for this job: [target]</span>")
 						return
 					new_access = job.get_access()
+					id_card.registered_account?.regen_vendables(job.outfit)
 				id_card.access -= get_all_centcom_access() + get_all_accesses()
 				id_card.access |= new_access
 				id_card.assignment = target

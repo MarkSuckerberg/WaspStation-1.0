@@ -304,7 +304,7 @@ GLOBAL_LIST_EMPTY(vending_products)
   * * recordlist - the list containing /datum/data/vending_product datums
   * * startempty - should we set vending_product record amount from the product list (so it's prefilled at roundstart)
   */
-/obj/machinery/vending/proc/build_inventory(list/productlist, list/recordlist, start_empty = FALSE)
+/proc/build_inventory(list/productlist, list/recordlist, start_empty = FALSE)
 	for(var/typepath in productlist)
 		var/amount = productlist[typepath]
 		if(isnull(amount))
@@ -770,14 +770,15 @@ GLOBAL_LIST_EMPTY(vending_products)
 			var/price_to_use = default_price
 			if(R.custom_price)
 				price_to_use = R.custom_price
-			if(R in hidden_records)
-				if(!extended_inventory)
+			if(record_to_check?.len)
+				if(R in hidden_records)
+					if(!extended_inventory)
+						vend_ready = TRUE
+						return
+				else if (!(R in record_to_check))
 					vend_ready = TRUE
+					message_admins("Vending machine exploit attempted by [ADMIN_LOOKUPFLW(usr)]!")
 					return
-			else if (!(R in record_to_check))
-				vend_ready = TRUE
-				message_admins("Vending machine exploit attempted by [ADMIN_LOOKUPFLW(usr)]!")
-				return
 			if (R.amount <= 0)
 				say("Sold out of [R.name].")
 				flick(icon_deny,src)

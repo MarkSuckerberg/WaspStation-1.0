@@ -471,6 +471,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 						return
 					if(inserted_modify_id.registered_account)
 						inserted_modify_id.registered_account.account_job = jobdatum // this is a terrible idea and people will grief but sure whatever
+						inserted_modify_id.registered_account.regen_vendables(jobdatum.outfit)
 
 					inserted_modify_id.access = ( istype(src, /obj/machinery/computer/card/centcom) ? get_centcom_access(t1) : jobdatum.get_access() )
 				if (inserted_modify_id)

@@ -4,6 +4,7 @@
 	var/account_holder = "Rusty Venture"
 	var/account_balance = 0
 	var/datum/job/account_job
+	var/list/account_vendables = list()
 	var/list/bank_cards = list()
 	var/add_to_accounts = TRUE
 	var/account_id
@@ -102,6 +103,18 @@
 				if(M.can_hear())
 					M.playsound_local(get_turf(sound_atom), 'sound/machines/twobeep_high.ogg', 50, TRUE)
 					to_chat(M, "[icon2html(icon_source, M)] <span class='notice'>[message]</span>")
+
+/datum/bank_account/proc/regen_vendables(datum/outfit/job/D)
+	var/datum/outfit/job/outfit = new D
+	var/list/to_add = list(outfit.uniform = 1, outfit.back = 1, outfit.shoes = 1)
+	if(outfit.suit)
+		to_add += list(outfit.suit = 1)
+	if(outfit.alt_uniform)
+		to_add += list(outfit.alt_uniform = 1)
+	if(text2path("[outfit.uniform]/skirt"))
+		to_add += list(text2path("[outfit.uniform]/skirt") = 1)
+	account_vendables.Cut()
+	build_inventory(to_add, account_vendables)
 
 /datum/bank_account/department
 	account_holder = "Guild Credit Agency"

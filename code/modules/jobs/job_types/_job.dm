@@ -187,7 +187,7 @@
 	H.dna.species.before_equip_job(src, H, visualsOnly)
 
 	if(outfit && preference_source && preference_source.prefs && preference_source.prefs.alt_titles_preferences[title])
-		var/outfitholder = "[outfit]/[replacetext(lowertext(preference_source.prefs.alt_titles_preferences[title]), " ", "")]"
+		var/outfitholder = "[outfit]/[ckey(preference_source.prefs.alt_titles_preferences[title])]"
 		if(text2path(outfitholder) || !outfitholder)
 			outfit = text2path(outfitholder)
 	if(outfit_override || outfit)
@@ -268,6 +268,8 @@
 	var/alt_suit = null
 	var/dcoat = /obj/item/clothing/suit/hooded/wintercoat
 
+	var/list/vendables = list()
+
 	var/pda_slot = ITEM_SLOT_BELT
 
 /datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source = null)
@@ -290,6 +292,9 @@
 			back = courierbag //Department messenger bag
 		else
 			back = backpack //Department backpack
+
+	if(!vendables)
+		vendables = list(uniform, text2path("[uniform]/skirt"), suit, back, shoes)
 
 	var/holder
 	switch(H.jumpsuit_style)
