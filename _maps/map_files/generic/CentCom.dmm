@@ -13651,7 +13651,6 @@
 /turf/open/floor/carpet/black,
 /area/centcom/holding)
 "Fb" = (
-/obj/structure/piano,
 /obj/machinery/light{
 	dir = 8
 	},
