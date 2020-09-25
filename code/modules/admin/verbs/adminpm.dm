@@ -85,6 +85,7 @@
 			AH.AddInteraction("<b>No client found, message not sent:</b><br>[msg]")
 			return
 	cmd_admin_pm(whom, msg)
+	AH.Claim()
 
 /client/proc/cmd_ahelp_reply_instant(whom, msg)
 	if(prefs.muted & MUTE_ADMINHELP)
