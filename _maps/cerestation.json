@@ -1,0 +1,11 @@
+{
+    "map_name": "Cerestation",
+    "map_path": "map_files/Cerestation",
+    "map_file": "Cerestation.dmm",
+    "shuttles": {
+	    "cargo": "cargo_box",
+	    "ferry": "ferry_fancy",
+	    "whiteship": "whiteship_box",
+	    "emergency": "emergency_box"
+    }
+}
