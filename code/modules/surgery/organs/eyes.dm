@@ -386,3 +386,6 @@
 	eye_icon_state = "snail_eyes"
 	icon_state = "snail_eyeballs"
 
+/obj/item/organ/eyes/tesheyes
+	name = "teshari eyes"
+	eye_icon_state = "tesheyes"
