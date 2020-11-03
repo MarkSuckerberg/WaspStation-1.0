@@ -11,7 +11,6 @@
 	construction_time=100
 	build_path = /obj/item/stock_parts/cell/empty
 	category = list("Misc","Power Designs","Machinery","initial")
-	departmental_flags = DEPARTMENTAL_FLAG_ALL
 
 /datum/design/high_cell
 	name = "High-Capacity Power Cell"
@@ -78,6 +77,17 @@
 	build_path = /obj/item/stock_parts/cell/bluespace/empty
 	category = list("Misc","Power Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+
+/datum/design/gun_cell/large
+	name = "Large Weapon Power Cell"
+	desc = "A huge weapon power cell, holding 50 MJ of energy."
+	id = "gun_cell_large"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 2000, /datum/material/gold = 200, /datum/material/glass = 400, /datum/material/diamond = 160, /datum/material/titanium = 300, /datum/material/bluespace = 100)
+	construction_time=100
+	build_path = /obj/item/stock_parts/cell/gun/large/empty
+	category = list("Misc","Power Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/light_replacer
 	name = "Light Replacer"

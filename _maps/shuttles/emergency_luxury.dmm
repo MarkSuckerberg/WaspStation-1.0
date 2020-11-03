@@ -5,37 +5,6 @@
 "ab" = (
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/escape/luxury)
-"ac" = (
-/obj/machinery/door/airlock/external{
-	name = "Economy-Class"
-	},
-/turf/open/floor/plasteel,
-/area/shuttle/escape/luxury)
-"ad" = (
-/obj/machinery/scanner_gate/luxury_shuttle{
-	layer = 2.6
-	},
-/obj/machinery/door/airlock/silver{
-	name = "First Class"
-	},
-/turf/open/floor/carpet/orange,
-/area/shuttle/escape/luxury)
-"ae" = (
-/obj/docking_port/mobile/emergency{
-	dir = 2;
-	dwidth = 5;
-	height = 14;
-	name = "Luxurious Emergency Shuttle";
-	width = 25
-	},
-/obj/machinery/scanner_gate/luxury_shuttle{
-	layer = 2.6
-	},
-/obj/machinery/door/airlock/silver{
-	name = "First Class"
-	},
-/turf/open/floor/carpet/orange,
-/area/shuttle/escape/luxury)
 "af" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Escape Shuttle Cell";
@@ -47,7 +16,7 @@
 /turf/closed/indestructible/riveted/plastinum,
 /area/shuttle/escape/luxury)
 "ah" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/structure/ore_box,
 /obj/effect/decal/cleanable/cobweb,
 /obj/machinery/light/small{
@@ -59,7 +28,7 @@
 /turf/closed/indestructible/riveted/plastinum,
 /area/shuttle/escape)
 "aj" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate/large,
 /obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/open/floor/plasteel,
@@ -78,13 +47,13 @@
 /area/shuttle/escape/luxury)
 "ap" = (
 /obj/structure/chair/comfy/teal{
-	icon_state = "comfychair";
-	dir = 4
+	dir = 4;
+	icon_state = "comfychair"
 	},
 /turf/open/floor/mineral/diamond,
 /area/shuttle/escape)
 "aq" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/window{
 	dir = 4
@@ -226,8 +195,8 @@
 /area/shuttle/escape/luxury)
 "aM" = (
 /obj/structure/chair/comfy/teal{
-	icon_state = "comfychair";
-	dir = 4
+	dir = 4;
+	icon_state = "comfychair"
 	},
 /turf/open/floor/mineral/diamond,
 /area/shuttle/escape/luxury)
@@ -348,13 +317,13 @@
 /area/shuttle/escape/luxury)
 "bf" = (
 /obj/structure/closet/crate/trashcart,
-/obj/effect/turf_decal/industrial/loading,
+/obj/effect/turf_decal/loading_area,
 /obj/effect/spawner/lootdrop/maintenance/six,
 /turf/open/floor/plasteel,
 /area/shuttle/escape/luxury)
 "bg" = (
 /obj/structure/closet/crate/trashcart,
-/obj/effect/turf_decal/industrial/loading,
+/obj/effect/turf_decal/loading_area,
 /obj/effect/spawner/lootdrop/maintenance/three,
 /turf/open/floor/plasteel,
 /area/shuttle/escape/luxury)
@@ -391,20 +360,20 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "bn" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate/engineering/electrical,
 /obj/effect/decal/cleanable/robot_debris,
 /obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/open/floor/plasteel,
 /area/shuttle/escape/luxury)
 "bo" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate/engineering,
 /obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/open/floor/plasteel,
 /area/shuttle/escape/luxury)
 "bp" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/structure/window{
 	dir = 4
 	},
@@ -455,8 +424,8 @@
 	layer = 2.9
 	},
 /turf/open/floor/holofloor/beach/coast_t{
-	icon_state = "sandwater_t";
-	dir = 8
+	dir = 8;
+	icon_state = "sandwater_t"
 	},
 /area/shuttle/escape/luxury)
 "bx" = (
@@ -467,20 +436,20 @@
 /area/shuttle/escape/luxury)
 "by" = (
 /obj/structure/closet/crate/large,
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/robot_debris,
 /obj/effect/spawner/lootdrop/maintenance/eight,
 /turf/open/floor/plasteel,
 /area/shuttle/escape/luxury)
 "bz" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
 	},
 /turf/open/floor/plasteel,
 /area/shuttle/escape/luxury)
 "bA" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/structure/window{
 	dir = 4
 	},
@@ -499,7 +468,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
-/obj/effect/turf_decal/industrial/warning,
+/obj/effect/turf_decal/stripes/line,
 /obj/structure/window,
 /turf/open/floor/plasteel,
 /area/shuttle/escape/luxury)
@@ -523,8 +492,8 @@
 "bG" = (
 /obj/machinery/door/window/eastleft,
 /turf/open/floor/holofloor/beach/coast_t{
-	icon_state = "sandwater_t";
-	dir = 8
+	dir = 8;
+	icon_state = "sandwater_t"
 	},
 /area/shuttle/escape/luxury)
 "bH" = (
@@ -537,7 +506,7 @@
 /area/shuttle/escape/luxury)
 "bJ" = (
 /obj/structure/chair/comfy/shuttle,
-/obj/effect/turf_decal/industrial/warning{
+/obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
 /obj/structure/window{
@@ -547,7 +516,7 @@
 /area/shuttle/escape/luxury)
 "bK" = (
 /obj/structure/chair/comfy/shuttle,
-/obj/effect/turf_decal/industrial/warning{
+/obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
 /obj/structure/window{
@@ -563,8 +532,8 @@
 /obj/structure/window/reinforced,
 /obj/machinery/door/window/eastright,
 /turf/open/floor/holofloor/beach/coast_t{
-	icon_state = "sandwater_t";
-	dir = 8
+	dir = 8;
+	icon_state = "sandwater_t"
 	},
 /area/shuttle/escape/luxury)
 "bN" = (
@@ -621,7 +590,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
-/obj/effect/turf_decal/industrial/warning,
+/obj/effect/turf_decal/stripes/line,
 /obj/structure/window,
 /turf/open/floor/plating,
 /area/shuttle/escape/luxury)
@@ -662,7 +631,7 @@
 /turf/open/floor/carpet/cyan,
 /area/shuttle/escape/luxury)
 "cc" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate/large,
 /obj/effect/decal/cleanable/robot_debris,
 /obj/effect/spawner/lootdrop/maintenance/eight,
@@ -698,7 +667,7 @@
 /turf/open/floor/carpet/orange,
 /area/shuttle/escape/luxury)
 "ci" = (
-/obj/structure/piano{
+/obj/structure/musician/piano{
 	icon_state = "piano"
 	},
 /turf/open/floor/carpet/green,
@@ -853,7 +822,7 @@
 /area/shuttle/escape/luxury)
 "cD" = (
 /obj/structure/frame/machine,
-/obj/effect/turf_decal/industrial/hatch/yellow,
+/obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/cobweb,
 /obj/machinery/light/small{
 	dir = 8
@@ -956,6 +925,13 @@
 	},
 /turf/open/floor/carpet/green,
 /area/shuttle/escape/luxury)
+"el" = (
+/obj/machinery/door/airlock/external{
+	name = "Economy-Class"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plasteel,
+/area/shuttle/escape/luxury)
 "qa" = (
 /obj/structure/toilet{
 	pixel_y = 8
@@ -965,6 +941,14 @@
 	},
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape/luxury)
+"BC" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Escape Shuttle Cell";
+	req_access_txt = "2"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/mineral/plastitanium/red/brig,
+/area/shuttle/escape/luxury)
 "Lt" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Escape Shuttle Cell";
@@ -972,6 +956,33 @@
 	},
 /obj/machinery/scanner_gate/luxury_shuttle,
 /turf/open/floor/mineral/plastitanium/red/brig,
+/area/shuttle/escape/luxury)
+"Nh" = (
+/obj/machinery/scanner_gate/luxury_shuttle{
+	layer = 2.6
+	},
+/obj/machinery/door/airlock/silver{
+	name = "First Class"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/carpet/orange,
+/area/shuttle/escape/luxury)
+"TU" = (
+/obj/docking_port/mobile/emergency{
+	dir = 2;
+	dwidth = 5;
+	height = 14;
+	name = "Luxurious Emergency Shuttle";
+	width = 25
+	},
+/obj/machinery/scanner_gate/luxury_shuttle{
+	layer = 2.6
+	},
+/obj/machinery/door/airlock/silver{
+	name = "First Class"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/carpet/orange,
 /area/shuttle/escape/luxury)
 
 (1,1,1) = {"
@@ -1103,7 +1114,7 @@ bC
 ab
 "}
 (9,1,1) = {"
-ac
+el
 ax
 bs
 bC
@@ -1135,7 +1146,7 @@ av
 ay
 "}
 (11,1,1) = {"
-af
+BC
 at
 at
 bD
@@ -1231,7 +1242,7 @@ ch
 ag
 "}
 (17,1,1) = {"
-ae
+TU
 ao
 bw
 bG
@@ -1263,7 +1274,7 @@ ao
 ag
 "}
 (19,1,1) = {"
-ad
+Nh
 ao
 ao
 ao

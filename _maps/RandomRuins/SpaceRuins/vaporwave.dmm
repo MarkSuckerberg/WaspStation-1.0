@@ -28,7 +28,7 @@
 /turf/open/floor/holofloor/beach,
 /area/ruin/space/has_grav/powered/aesthetic)
 "i" = (
-/obj/structure/piano,
+/obj/structure/musician/piano,
 /obj/structure/window{
 	dir = 8
 	},
@@ -158,7 +158,7 @@
 	},
 /area/ruin/unpowered/no_grav)
 "G" = (
-/obj/effect/turf_decal/industrial/warning/dust,
+/obj/effect/turf_decal/stripes/asteroid/line,
 /obj/effect/turf_decal/sand/plating,
 /turf/open/floor/plating{
 	initial_gas_mix = "TEMP=2.7"

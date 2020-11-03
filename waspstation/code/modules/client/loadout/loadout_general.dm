@@ -57,6 +57,11 @@
 	path = /obj/item/lighter
 	cost = 500
 
+/datum/gear/clockworkzippo
+	display_name = "Clockwork Zippo"
+	path = /obj/item/lighter/clockwork
+	cost = 750
+
 /datum/gear/cards
 	display_name = "toy, deck of cards"
 	path = /obj/item/toy/cards/deck
@@ -117,6 +122,22 @@
 	display_name = "toy, moth plushie"
 	path = /obj/item/toy/plush/moth
 	cost = 1500
+
+/datum/gear/hornet
+	display_name = "toy, marketable hornet plushie"
+	path = /obj/item/toy/plush/hornet
+	cost = 2000
+
+/datum/gear/gayhornet
+	display_name = "toy, gay hornet plushie"
+	path = /obj/item/toy/plush/hornet/gay
+	description = "Hornet says lesbian rights."
+	cost = 6969
+
+/datum/gear/knight
+	display_name = "toy, marketable knight plushie"
+	path = /obj/item/toy/plush/knight
+	cost = 2000 //imagine not being able to afford the marketable plushes
 
 /datum/gear/flashlight
 	display_name = "tool, flashlight"

@@ -206,6 +206,8 @@
 
 /datum/config_entry/flag/emojis
 
+/datum/config_entry/flag/chat_markup // Waspstation edit - Chat markup
+
 /datum/config_entry/keyed_list/multiplicative_movespeed
 	key_mode = KEY_MODE_TYPE
 	value_mode = VALUE_MODE_NUM
@@ -388,6 +390,10 @@
 	value_mode = VALUE_MODE_NUM
 
 /datum/config_entry/number/monkeycap
+	config_entry_value = 64
+	min_val = 0
+
+/datum/config_entry/number/ratcap
 	config_entry_value = 64
 	min_val = 0
 

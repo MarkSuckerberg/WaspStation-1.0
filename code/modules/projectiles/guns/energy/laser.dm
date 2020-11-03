@@ -1,7 +1,6 @@
 /obj/item/gun/energy/laser
 	name = "laser gun"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
-	icon = 'waspstation/icons/obj/guns/energy.dmi'
 	icon_state = "laser"
 	item_state = "laser"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -80,6 +79,8 @@
 	icon_state = "lasercannon"
 	item_state = "laser"
 	w_class = WEIGHT_CLASS_BULKY
+	big_gun = TRUE
+	cell_type = "/obj/item/stock_parts/cell/gun/large"
 	force = 10
 	flags_1 =  CONDUCT_1
 	slot_flags = ITEM_SLOT_BACK
@@ -91,6 +92,7 @@
 	projectile_type = /obj/projectile/beam/laser/accelerator
 	select_name = "accelerator"
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
+	e_cost = 5000
 
 /obj/projectile/beam/laser/accelerator
 	name = "accelerator laser"

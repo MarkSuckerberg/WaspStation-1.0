@@ -4,14 +4,15 @@
 	icon = 'waspstation/icons/obj/guns/energy.dmi' //waspstation edit
 	icon_state = "ionrifle"
 	item_state = null	//so the human update icon uses the icon_state instead.
-	shaded_charge = TRUE
-	can_flashlight = TRUE
+	shaded_charge = FALSE
+	ammo_x_offset = 2
+	ammo_y_offset = 2
+	can_flashlight = FALSE
 	w_class = WEIGHT_CLASS_HUGE
+	big_gun = TRUE //yes, you can put the comically large cell in it. No, you aren't getting it roundstart. You slut.
 	flags_1 =  CONDUCT_1
 	slot_flags = ITEM_SLOT_BACK
 	ammo_type = list(/obj/item/ammo_casing/energy/ion)
-	flight_x_offset = 17
-	flight_y_offset = 9
 
 /obj/item/gun/energy/ionrifle/emp_act(severity)
 	return
@@ -22,7 +23,10 @@
 	icon_state = "ioncarbine"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
+	ammo_x_offset = 2
+	ammo_y_offset = 0
 	pin = null
+	can_flashlight = TRUE
 	flight_x_offset = 18
 	flight_y_offset = 11
 
@@ -283,6 +287,9 @@
 		p_blue = P
 	crosslink()
 
+/obj/item/gun/energy/wormhole_projector/core_inserted
+    firing_core = TRUE
+
 /* 3d printer 'pseudo guns' for borgs */
 
 /obj/item/gun/energy/printer
@@ -310,7 +317,8 @@
 	icon_state = "freezegun"
 	desc = "A gun that changes temperatures."
 	ammo_type = list(/obj/item/ammo_casing/energy/temp, /obj/item/ammo_casing/energy/temp/hot)
-	cell_type = /obj/item/stock_parts/cell/gun/upgraded
+	cell_type = "/obj/item/stock_parts/cell/gun/upgraded"
+	ammo_x_offset = 2
 	automatic = 1
 	fire_rate = 4
 	pin = null

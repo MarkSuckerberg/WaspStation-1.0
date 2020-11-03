@@ -13,10 +13,6 @@
  * SQL sanitization
  */
 
-// Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
-/proc/sanitizeSQL(t)
-	return SSdbcore.Quote("[t]")
-
 /proc/format_table_name(table as text)
 	return CONFIG_GET(string/feedback_tableprefix) + table
 
@@ -71,6 +67,26 @@
 /proc/adminscrub(t,limit=MAX_MESSAGE_LEN)
 	return copytext((html_encode(strip_html_simple(t))),1,limit)
 
+//Begin Waspstation edit - Chat markup
+//Credit to Aurorastation for the regex and idea for the proc
+//Should be in the form of "tag to be replaced" = list("replacement for beginning", "replacement for end")
+GLOBAL_LIST_INIT(markup_tags, list("/"  = list("<i>", "</i>"),
+								   "**" = list("<b>", "</b>")))
+//Should be in the form of "((\\W|^)@)(\[^@\]*)(@(\\W|$)), "g"", where @ is the appropriate tag from markup_tags
+GLOBAL_LIST_INIT(markup_regex, list("/"  = new /regex("((\\W|^)_)(\[^_\]*)(_(\\W|$))", "g"),
+									"**" = new /regex("((\\W|^)\\*\\*)(\[^\\*\\*\]*)(\\*\\*(\\W|$))", "g")))
+
+/proc/process_chat_markup(var/message, var/list/ignore = list())
+	if(!CONFIG_GET(flag/chat_markup) || !message)
+		return message
+
+	var/regex/markup
+	for(var/tag in (GLOB.markup_tags - ignore))
+		markup = GLOB.markup_regex[tag]
+		message = markup.Replace_char(message, "$2[GLOB.markup_tags[tag][1]]$3[GLOB.markup_tags[tag][2]]$5")
+	
+	return message
+//End Waspstation edit - Chat markup
 
 //Returns null if there is any bad text in the string
 /proc/reject_bad_text(text, max_length = 512, ascii_only = TRUE)
@@ -821,3 +837,13 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 		return json_decode(data)
 	catch
 		return
+
+/proc/num2loadingbar(percent as num, var/numSquares = 20, var/reverse = FALSE)
+	var/loadstring = ""
+	for (var/i in 1 to numSquares)
+		var/limit = reverse ? numSquares - percent*numSquares : percent*numSquares
+		if (i <= limit)
+			loadstring += "█"
+		else
+			loadstring += "░"
+	return "\[" + loadstring + "]"

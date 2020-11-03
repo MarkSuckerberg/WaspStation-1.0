@@ -13,7 +13,7 @@ ADDRESS 127.0.0.1
 PORT 3306
 
 ## Database for all SQL functions, not just feedback.
-FEEDBACK_DATABASE waspstation
+FEEDBACK_DATABASE feedback
 
 ## Prefix to be added to the name of every table, older databases will require this be set to erro_
 ## Note, this does not change the table names in the database, you will have to do that yourself.
@@ -24,7 +24,7 @@ FEEDBACK_DATABASE waspstation
 FEEDBACK_TABLEPREFIX
 
 ## Username/Login used to access the database.
-FEEDBACK_LOGIN ss13
+FEEDBACK_LOGIN username
 
 ## Password used to access the database.
 FEEDBACK_PASSWORD password
