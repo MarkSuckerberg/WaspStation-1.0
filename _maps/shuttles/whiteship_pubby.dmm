@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ab" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
@@ -35,7 +35,7 @@
 /turf/open/floor/plasteel,
 /area/shuttle/abandoned/cargo)
 "cI" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/light,
@@ -489,7 +489,7 @@
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "tX" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/engine,
 /area/shuttle/abandoned/cargo)
@@ -539,8 +539,8 @@
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "xe" = (
-/obj/effect/turf_decal/caution/stand_clear,
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/stand_clear,
+/obj/effect/turf_decal/industrial/warning,
 /obj/machinery/button/door{
 	id = "pubbywspodsw";
 	name = "Pod Door Control";
@@ -579,8 +579,8 @@
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/engine)
 "yu" = (
-/obj/effect/turf_decal/caution/stand_clear,
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/stand_clear,
+/obj/effect/turf_decal/industrial/warning,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/engine,
 /area/shuttle/abandoned/cargo)
@@ -595,7 +595,7 @@
 /turf/open/floor/plasteel,
 /area/shuttle/abandoned/cargo)
 "yC" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
@@ -818,7 +818,7 @@
 /turf/open/floor/plasteel,
 /area/shuttle/abandoned/cargo)
 "Ku" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
@@ -887,15 +887,15 @@
 /turf/open/floor/plasteel/dark,
 /area/shuttle/abandoned/engine)
 "No" = (
-/obj/effect/turf_decal/caution/stand_clear,
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/stand_clear,
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/engine,
 /area/shuttle/abandoned/cargo)
 "Oq" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -946,7 +946,7 @@
 /turf/open/floor/engine,
 /area/shuttle/abandoned/cargo)
 "Sg" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -1035,8 +1035,8 @@
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "WG" = (
-/obj/effect/turf_decal/caution/stand_clear,
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/stand_clear,
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /obj/machinery/button/door{
@@ -1095,7 +1095,7 @@
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "YC" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,

@@ -20,7 +20,7 @@
 /turf/template_noop,
 /area/template_noop)
 "bV" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 5
 	},
 /turf/open/floor/engine,
@@ -75,19 +75,19 @@
 /turf/open/floor/plating/airless,
 /area/engine/engineering)
 "dz" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
 "eq" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 9
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "es" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
 /turf/open/floor/plating,
@@ -102,13 +102,13 @@
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
 "eZ" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "fD" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
 /obj/structure/reagent_dispensers/watertank,
@@ -131,7 +131,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /obj/machinery/camera/emp_proof{
@@ -162,7 +162,7 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "gE" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
 /obj/structure/reagent_dispensers/fueltank,
@@ -176,7 +176,7 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "ib" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/light{
@@ -203,7 +203,7 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "iN" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
 /turf/open/floor/engine,
@@ -232,7 +232,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /turf/open/floor/engine,
@@ -283,7 +283,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "lP" = (
@@ -320,7 +320,7 @@
 /turf/open/floor/plating/airless,
 /area/engine/engineering)
 "nQ" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
 /turf/open/floor/engine,
@@ -338,7 +338,7 @@
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
 "ok" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/structure/cable{
@@ -365,13 +365,13 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "pi" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /obj/structure/cable,
 /obj/machinery/power/emitter/welded,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "pE" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -403,14 +403,14 @@
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "qf" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -491,7 +491,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/industrial/outline/yellow,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "SupermatterExternal";
 	name = "radiation shutters"
@@ -529,7 +529,7 @@
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
 "tU" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -578,7 +578,7 @@
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
 "wP" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -600,7 +600,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/effect/turf_decal/box,
@@ -610,7 +610,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /turf/open/floor/engine,
@@ -667,7 +667,7 @@
 /turf/open/space,
 /area/space/nearstation)
 "Cw" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -699,7 +699,7 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "Dz" = (
-/obj/effect/turf_decal/stripes/corner{
+/obj/effect/turf_decal/industrial/warning/corner{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -749,7 +749,7 @@
 /turf/open/space,
 /area/space)
 "GW" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -776,7 +776,7 @@
 /turf/open/floor/plating/airless,
 /area/engine/engineering)
 "HO" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/button/door{
@@ -814,7 +814,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /turf/open/floor/engine,
@@ -852,7 +852,7 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "KV" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "KY" = (
@@ -865,7 +865,7 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "Lf" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "Lw" = (
@@ -882,11 +882,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
-/obj/effect/turf_decal/stripes/corner,
+/obj/effect/turf_decal/industrial/warning/corner,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "Mv" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
 /turf/open/floor/plating,
@@ -896,7 +896,7 @@
 	id = "SupermatterExternal";
 	name = "radiation shutters"
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/industrial/outline/yellow,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
@@ -912,7 +912,7 @@
 	dir = 4
 	},
 /obj/machinery/light,
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "OB" = (
@@ -969,7 +969,7 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "SY" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/machinery/button/door{
@@ -997,7 +997,7 @@
 /area/engine/engineering)
 "Us" = (
 /obj/machinery/light,
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "Uu" = (
@@ -1039,7 +1039,7 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "VU" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -1050,7 +1050,7 @@
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
 "Xw" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{

@@ -189,7 +189,13 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
 "aB" = (
-/turf/open/floor/plasteel/checker,
+/obj/effect/turf_decal/corner/black{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/black{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
 "aC" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple,
@@ -318,7 +324,13 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/plasteel/checker,
+/obj/effect/turf_decal/corner/black{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/black{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
 "ba" = (
 /obj/structure/plasticflaps,
@@ -383,7 +395,13 @@
 /area/ruin/space/has_grav/hellfactory)
 "bk" = (
 /obj/structure/tank_dispenser/oxygen,
-/turf/open/floor/plasteel/checker,
+/obj/effect/turf_decal/corner/black{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/black{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
 "bl" = (
 /obj/structure/window/reinforced{
@@ -545,7 +563,7 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hellfactory)
 "bJ" = (
-/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/industrial/hatch/yellow,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hellfactory)
 "bK" = (
@@ -969,7 +987,13 @@
 	brightness = 3;
 	dir = 8
 	},
-/turf/open/floor/plasteel/checker,
+/obj/effect/turf_decal/corner/black{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/black{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
 "pb" = (
 /obj/structure/cable{
@@ -1073,7 +1097,13 @@
 /area/ruin/space/has_grav/hellfactory)
 "GE" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/checker,
+/obj/effect/turf_decal/corner/black{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/black{
+	dir = 2
+	},
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hellfactory)
 "Jv" = (
 /obj/structure/table/reinforced,

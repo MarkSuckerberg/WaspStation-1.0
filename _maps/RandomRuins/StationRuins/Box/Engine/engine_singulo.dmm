@@ -66,7 +66,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "fm" = (
@@ -127,7 +127,7 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "iP" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -147,19 +147,19 @@
 /turf/open/floor/plating/airless,
 /area/engine/engineering)
 "lM" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
 "lP" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "mA" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/structure/cable{
@@ -172,14 +172,14 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "nc" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
 /area/engine/engineering)
 "nn" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /obj/machinery/power/emitter/welded,
 /obj/structure/cable,
 /turf/open/floor/engine,
@@ -191,7 +191,7 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "pK" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
 /obj/structure/reagent_dispensers/watertank,
@@ -229,7 +229,7 @@
 /turf/open/floor/plating/airless,
 /area/space)
 "sP" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/machinery/button/door{
@@ -244,7 +244,7 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "tj" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -256,7 +256,7 @@
 /turf/open/floor/plating,
 /area/engine/engineering)
 "tw" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/button/door{
@@ -331,7 +331,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /obj/machinery/camera/emp_proof{
@@ -374,12 +374,12 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
-/obj/effect/turf_decal/stripes/corner,
+/obj/effect/turf_decal/industrial/warning/corner,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "ym" = (
 /obj/machinery/light,
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /obj/structure/closet/radiation,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
@@ -408,7 +408,7 @@
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
 "Aw" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
 /turf/open/floor/plating,
@@ -440,7 +440,7 @@
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
 "CB" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
 /turf/open/floor/engine,
@@ -473,7 +473,7 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "El" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /obj/structure/cable,
 /obj/machinery/power/emitter/welded,
 /turf/open/floor/engine,
@@ -517,7 +517,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /turf/open/floor/engine,
@@ -535,7 +535,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/industrial/outline/yellow,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "SupermatterExternal";
 	name = "radiation shutters"
@@ -543,7 +543,7 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "Gm" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -553,25 +553,25 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "Hk" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "Hr" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 5
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "Hu" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 9
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "HG" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -595,7 +595,7 @@
 	dir = 4
 	},
 /obj/machinery/light,
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /obj/structure/closet/radiation,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
@@ -606,7 +606,7 @@
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
 "Jl" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /obj/machinery/light{
@@ -637,7 +637,7 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "JV" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "Ka" = (
@@ -669,7 +669,7 @@
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "LL" = (
@@ -687,7 +687,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /obj/effect/turf_decal/box,
@@ -758,7 +758,7 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "PW" = (
-/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "PZ" = (
@@ -766,7 +766,7 @@
 	id = "SupermatterExternal";
 	name = "radiation shutters"
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/industrial/outline/yellow,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
@@ -774,7 +774,7 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "QC" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
 /obj/structure/reagent_dispensers/fueltank,
@@ -787,7 +787,7 @@
 /turf/closed/wall,
 /area/engine/engineering)
 "QO" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -825,7 +825,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -875,7 +875,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /turf/open/floor/engine,
@@ -896,7 +896,7 @@
 /turf/open/floor/plating/airless,
 /area/engine/engineering)
 "Wg" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -928,7 +928,7 @@
 /turf/open/floor/plating/airless,
 /area/engine/engineering)
 "XF" = (
-/obj/effect/turf_decal/stripes/corner{
+/obj/effect/turf_decal/industrial/warning/corner{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -974,13 +974,13 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "Zk" = (
-/obj/effect/turf_decal/stripes/line{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
 /turf/open/floor/plating,
