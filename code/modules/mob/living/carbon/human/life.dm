@@ -38,13 +38,12 @@
 			//heart attack stuff
 			handle_heart()
 			handle_liver()
+			//Wasp Begin
+			handle_fractures() //broken bones
+			handle_shock() //pain and shock
+			//Wasp End
 
 		dna.species.spec_life(src) // for mutantraces
-
-	//WaspStation Begin - Broken bones
-	if(stat != DEAD)
-		handle_fractures()
-	//WaspStation End
 
 	//Update our name based on whether our face is obscured/disfigured
 	name = get_visible_name()

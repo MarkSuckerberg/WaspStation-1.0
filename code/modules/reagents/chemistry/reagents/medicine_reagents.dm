@@ -1388,6 +1388,9 @@
 	..()
 	ADD_TRAIT(M, TRAIT_STABLEHEART, type)
 	ADD_TRAIT(M, TRAIT_STABLELIVER, type)
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		H.shock_stage = max(H.shock_stage - 1.5, 0)
 
 /datum/reagent/medicine/corazone/on_mob_end_metabolize(mob/living/M)
 	REMOVE_TRAIT(M, TRAIT_STABLEHEART, type)
@@ -1662,4 +1665,3 @@
 			for(var/obj/item/organ/O in C.internal_organs)
 				O.damage = 0
 			holder.remove_reagent(/datum/reagent/medicine/bonefixingjuice, 10)
-	..()

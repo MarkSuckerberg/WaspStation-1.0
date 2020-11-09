@@ -66,6 +66,9 @@
 	var/stam_regen_start_time = 0 ///used to halt stamina regen temporarily
 	var/stam_paralyzed = FALSE ///knocks you down
 
+	var/shock_stage = 0 //how much pain they're in. High levels are bad for your health. Very bad.
+	var/traumatic_shock = 0 //a sum of all damage; taken into account by shock_stage
+
 	/// Protection (insulation) from the heat, Value 0-1 corresponding to the percentage of protection
 	var/heat_protection = 0 // No heat protection
 	/// Protection (insulation) from the cold, Value 0-1 corresponding to the percentage of protection
