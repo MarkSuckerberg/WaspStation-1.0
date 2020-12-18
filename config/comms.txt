@@ -1,5 +1,5 @@
 ## Communication key for receiving data through world/Topic(), you don't want to give this out
-#COMMS_KEY default_pwd
+COMMS_KEY reallycoolkeyforboomercommsthatnobodysetyet
 
 ## World address and port for server receiving cross server messages
 ## Use '+' to denote spaces in ServerName
@@ -17,4 +17,4 @@
 #MEDAL_HUB_PASSWORD
 
 ## Bot IP:Port for discord notifications
-BOT_IP 127.0.0.1:8081
+BOT_IP 192.168.1.22:8080

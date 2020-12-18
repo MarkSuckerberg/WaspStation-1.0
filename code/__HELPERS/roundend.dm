@@ -222,6 +222,7 @@
 
 	var/popcount = gather_roundend_feedback()
 	display_report(popcount)
+	discord_report(popcount)
 
 	CHECK_TICK
 
@@ -488,6 +489,23 @@
 		parts += "Trash Eaten: [GLOB.mouse_food_eaten]"
 		return "<div class='panel stationborder'>[parts.Join("<br>")]</div>"
 	return ""
+
+/datum/controller/subsystem/ticker/proc/discord_report(popcount)
+	var/list/parts = list()
+	parts["mode"] = SSticker.mode.name
+	parts["players"] = GLOB.joined_player_list.len
+	parts["survivors"] = popcount[POPCOUNT_SURVIVORS]
+	parts["escapees"] = popcount[POPCOUNT_ESCAPEES]
+	parts["integrity"] = mode.station_was_nuked ? "Destroyed" : "[popcount["station_integrity"]]%"
+
+	var/list/ded = SSblackbox.first_death
+	if(ded.len)
+		parts["first_death"] = "[ded["name"]], [ded["role"]], at [ded["area"]].[ded["last_words"] ? " Their last words were: \"[ded["last_words"]]\"" : ""]"
+	//ignore this comment, it fixes the broken sytax parsing caused by the " above
+	else
+		parts["first_death"] = "Nobody died this shift!"
+
+	SSredbot.send_discord_message("roundend", "Round #[GLOB.round_id ? GLOB.round_id : "Unknown"]", FALSE, parts)
 //Wasp End
 /datum/controller/subsystem/ticker/proc/antag_report()
 	var/list/result = list()
