@@ -573,7 +573,7 @@ Turf and target are separate in case you want to teleport some distance from a t
 
 //Takes: Area type as text string or as typepath OR an instance of the area.
 //Returns: A list of all turfs in areas of that type of that type in the world.
-/proc/get_area_turfs(areatype, target_z = 0, subtypes=FALSE)
+/proc/get_area_turfs(areatype, list/target_z, subtypes=FALSE)
 	if(istext(areatype))
 		areatype = text2path(areatype)
 	else if(isarea(areatype))
@@ -581,6 +581,9 @@ Turf and target are separate in case you want to teleport some distance from a t
 		areatype = areatemp.type
 	else if(!ispath(areatype))
 		return null
+
+	if(target_z && !islist(target_z))
+		target_z = list(target_z)
 
 	var/list/turfs = list()
 	if(subtypes)
@@ -590,7 +593,7 @@ Turf and target are separate in case you want to teleport some distance from a t
 			if(!cache[A.type])
 				continue
 			for(var/turf/T in A)
-				if(target_z == 0 || target_z == T.z)
+				if(!target_z || T.z in target_z)
 					turfs += T
 	else
 		for(var/V in GLOB.sortedAreas)
@@ -598,7 +601,7 @@ Turf and target are separate in case you want to teleport some distance from a t
 			if(A.type != areatype)
 				continue
 			for(var/turf/T in A)
-				if(target_z == 0 || target_z == T.z)
+				if(!target_z || T.z in target_z)
 					turfs += T
 	return turfs
 

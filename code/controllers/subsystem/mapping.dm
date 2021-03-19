@@ -131,7 +131,8 @@ SUBSYSTEM_DEF(mapping)
 	var/list/space_ruins = levels_by_trait(ZTRAIT_SPACE_RUINS)
 	if (space_ruins.len)
 		seedRuins(space_ruins, CONFIG_GET(number/space_budget), list(/area/space), space_ruins_templates)
-	SSmapping.seedStation() //WS - Random Engine Framework
+	seedStation() //WS - Random Engine Framework
+	set_planetary_station()
 	loading_ruins = FALSE
 #endif
 	// Add the transit level
@@ -638,3 +639,10 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 		LM.load()
 	if(GLOB.stationroom_landmarks.len)
 		seedStation() //I'm sure we can trust everyone not to insert a 1x1 rooms which loads a landmark which loads a landmark which loads a la...
+
+/datum/controller/subsystem/mapping/proc/set_planetary_station()
+	var/datum/map_generator/mapgen = pick(/datum/map_generator/cave_generator/lavaland, /datum/map_generator/cave_generator/icemoon, /datum/map_generator/cave_generator/whitesands, /datum/map_generator/jungle_generator)
+	var/list/turfs_to_gen = get_area_turfs(/area/space, SSmapping.levels_by_trait(ZTRAIT_STATION), TRUE)
+
+	mapgen = new mapgen
+	mapgen.generate_terrain(turfs_to_gen)
