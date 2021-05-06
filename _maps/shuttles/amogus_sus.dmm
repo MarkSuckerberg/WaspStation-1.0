@@ -29,13 +29,12 @@
 /obj/docking_port/mobile{
 	can_move_docking_ports = 1;
 	dir = 2;
-	dwidth = 30;
-	height = 26;
+	dwidth = 31;
+	height = 27;
 	id = "skeld";
 	port_direction = 8;
-	preferred_direction = 4;
 	undock_roundstart = 1;
-	width = 48
+	width = 49
 	},
 /turf/open/floor/plasteel/dark,
 /area/shuttle/amogus/ship/hallwayport)
